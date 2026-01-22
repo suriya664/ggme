@@ -34,8 +34,36 @@
     updateToggle(theme);
   };
 
+  const highlightActiveNav = () => {
+    const path = decodeURIComponent(window.location.pathname);
+    const currentFile = path.split("/").pop() || "index.html";
+    const navItems = document.querySelectorAll(".navbar a.nav-link, .navbar .dropdown-item");
+
+    navItems.forEach((link) => {
+      const href = link.getAttribute("href") || "";
+      if (!href || href.startsWith("#") || href.startsWith("http")) {
+        return;
+      }
+      const hrefFile = href.split("/").pop();
+      if (hrefFile === currentFile) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+
+        const dropdown = link.closest(".dropdown");
+        if (dropdown) {
+          const toggle = dropdown.querySelector(".nav-link.dropdown-toggle");
+          if (toggle) {
+            toggle.classList.add("active");
+            toggle.setAttribute("aria-current", "page");
+          }
+        }
+      }
+    });
+  };
+
   const init = () => {
     setTheme(getPreferredTheme());
+    highlightActiveNav();
     toggles.forEach((button) => {
       button.addEventListener("click", () => {
         const current = root.getAttribute("data-theme") || "light";

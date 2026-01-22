@@ -97,6 +97,27 @@ a {
   color: var(--accent);
 }
 
+.nav-link.active,
+.dropdown-item.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.dropdown-menu {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.dropdown-item {
+  color: var(--text);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: var(--accent);
+  background: var(--surface-2);
+}
+
 .theme-toggle {
   color: var(--text);
   background: transparent;
