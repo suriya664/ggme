@@ -1,377 +1,276 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" data-bs-theme="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Game Dev Studio | Team</title>
-    <meta
-      name="description"
-      content="Meet the Game Dev Studio team of designers, engineers, artists, and producers."
-    />
-    <meta
-      name="keywords"
-      content="game studio team, game designers, UI UX, producers, artists"
-    />
-    <meta name="author" content="Game Dev Studio" />
-    <meta property="og:title" content="Game Dev Studio | Team" />
-    <meta
-      property="og:description"
-      content="A multidisciplinary team delivering premium game experiences."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
-    />
-    <link rel="canonical" href="https://gamedevstudio.com/team" />
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+<html lang="en" data-theme="dark" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | Game Dev Studio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-            <span class="logo-mark">G</span>
-            <span class="fw-bold">Game Dev Studio</span>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNav"
-            aria-controls="mainNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home 1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="home-2.html">Home 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="team.html">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  More
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
-                  <li><a class="dropdown-item" href="press-kit.html">Press Kit</a></li>
-                  <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
-                </ul>
-              </li>
-            </ul>
-            <div class="d-flex gap-2 align-items-center">
-              <button
-                class="btn btn-sm theme-toggle d-inline-flex align-items-center gap-2"
-                type="button"
-                aria-pressed="false"
-              >
-                <i class="bi bi-moon-stars"></i>
-              </button>
-              <a class="btn btn-outline-primary btn-sm" href="login.html">Login</a>
-              <a class="btn btn-primary btn-sm" href="register.html">Register</a>
-            </div>
-          </div>
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .team-card {
+            background: #1a1a1a;
+            padding: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            background: #222;
+        }
+
+        .team-img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: 0.3s;
+        }
+
+        .team-card:hover .team-img {
+            filter: grayscale(0%);
+        }
+
+        .team-info {
+            padding: 25px;
+        }
+
+        .team-name {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .team-role {
+            color: var(--primary-orange);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .team-bio {
+            font-size: 0.9rem;
+            color: #ccc;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .team-socials a {
+            color: #777;
+            margin: 0 10px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .team-socials a:hover {
+            color: var(--primary-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-left">
+            <button class="menu-btn"><span
+                    class="hamburger-icon"><span></span><span></span><span></span></span>MENU</button>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+            <a href="services.html" class="nav-link">SERVICES</a>
+            <a href="about.html" class="nav-link">ABOUT</a>
+            <a href="contact.html" class="nav-link">CONTACT</a>
         </div>
-      </nav>
+        <div class="header-center"><a href="index.html" class="logo-text">GAME DEV STUDIO</a></div>
+        <div class="header-right">
+            <a href="login.html" class="auth-link">LOGIN</a>
+            <a href="register.html" class="auth-link">REGISTER</a>
+            <a href="dashboard.html" class="auth-link dashboard-link">DASHBOARD</a>
+        </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-              <span class="badge badge-soft mb-3">Team Bios</span>
-              <h1 class="display-5 fw-bold mb-3">The people behind the worlds</h1>
-              <p class="text-muted lead">
-                Designers, artists, engineers, and producers collaborating across
-                continents to build unforgettable experiences.
-              </p>
-            </div>
-            <div class="col-lg-6">
-              <img
-                class="hero-image"
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
-                alt="Game development team collaboration"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    <main style="padding-top: 100px;">
+        <section class="section">
+            <div class="container">
+                <div class="text-center" data-aos="fade-up">
+                    <h1 class="section-title condensed">MEET THE LEADERSHIP</h1>
+                    <p class="section-subtitle">The visionaries behind our global success.</p>
+                </div>
 
-      <section class="section bg-surface-2">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-              <article class="card card-hover h-100 text-center">
-                <div class="card-body">
-                  <img
-                    class="rounded-circle mb-3"
-                    src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80"
-                    alt="Portrait of Ava Brooks"
-                    width="110"
-                    height="110"
-                  />
-                  <h5 class="mb-1">Ava Brooks</h5>
-                  <small class="text-muted">Studio Director</small>
-                  <p class="text-muted mt-3">
-                    Oversees creative direction and long-term studio vision.
-                  </p>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <article class="card card-hover h-100 text-center">
-                <div class="card-body">
-                  <img
-                    class="rounded-circle mb-3"
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
-                    alt="Portrait of Mateo Silva"
-                    width="110"
-                    height="110"
-                  />
-                  <h5 class="mb-1">Mateo Silva</h5>
-                  <small class="text-muted">Lead Engineer</small>
-                  <p class="text-muted mt-3">
-                    Builds scalable systems for multiplayer and live ops.
-                  </p>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <article class="card card-hover h-100 text-center">
-                <div class="card-body">
-                  <img
-                    class="rounded-circle mb-3"
-                    src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80"
-                    alt="Portrait of Naomi Chase"
-                    width="110"
-                    height="110"
-                  />
-                  <h5 class="mb-1">Naomi Chase</h5>
-                  <small class="text-muted">Art Director</small>
-                  <p class="text-muted mt-3">
-                    Guides visual style, character design, and world-building.
-                  </p>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <article class="card card-hover h-100 text-center">
-                <div class="card-body">
-                  <img
-                    class="rounded-circle mb-3"
-                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80"
-                    alt="Portrait of Riya Patel"
-                    width="110"
-                    height="110"
-                  />
-                  <h5 class="mb-1">Riya Patel</h5>
-                  <small class="text-muted">UX Strategist</small>
-                  <p class="text-muted mt-3">
-                    Crafts player journeys and optimizes onboarding experiences.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
+                <div class="team-grid">
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2574&auto=format&fit=crop"
+                            alt="CEO" class="team-img">
+                        <div class="team-info">
+                            <h3 class="team-name">Gilles Langourieux</h3>
+                            <p class="team-role">CEO & Founder</p>
+                            <div class="team-socials">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
 
-      <section class="section">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-lg-5">
-              <h2 class="section-title mb-3">Culture principles</h2>
-              <p class="text-muted">
-                Our studio thrives on clarity, empathy, and a shared focus on player
-                delight.
-              </p>
-            </div>
-            <div class="col-lg-7">
-              <div class="row g-4">
-                <div class="col-md-6">
-                  <div class="stat-card h-100">
-                    <h5>Player-first decisions</h5>
-                    <p class="text-muted mb-0">
-                      Every creative choice is validated through real player feedback.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="stat-card h-100">
-                    <h5>Radical collaboration</h5>
-                    <p class="text-muted mb-0">
-                      Cross-functional pods move quickly and communicate openly.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="stat-card h-100">
-                    <h5>Craftsmanship</h5>
-                    <p class="text-muted mb-0">
-                      We balance innovation with the detail that players notice.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="stat-card h-100">
-                    <h5>Global perspective</h5>
-                    <p class="text-muted mb-0">
-                      Diverse voices help us build inclusive worlds.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <a class="btn btn-outline-primary mt-4" href="careers.html">
-                Join the Team
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section bg-surface-2">
-        <div class="container">
-          <div class="row g-4 align-items-stretch">
-            <div class="col-lg-6">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                  <span class="badge badge-soft mb-3">Contact</span>
-                  <h2 class="section-title mb-3">Let's build your next game</h2>
-                  <p class="text-muted">
-                    Share your timeline, platform, and vision. We'll reply within 24
-                    hours.
-                  </p>
-                  <div class="mt-auto d-flex flex-wrap gap-3">
-                    <a class="btn btn-primary" href="contact.html">Contact Us</a>
-                    <a class="btn btn-outline-primary" href="portfolio.html">View Work</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="mb-3">Studio contact</h5>
-                  <div class="d-flex gap-3 mb-3">
-                    <div class="icon-circle"><i class="bi bi-envelope"></i></div>
-                    <div>
-                      <div class="fw-semibold">Email</div>
-                      <small class="text-muted">hello@gamedevstudio.com</small>
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop"
+                            alt="COO" class="team-img">
+                        <div class="team-info">
+                            <h3 class="team-name">Christophe Gandon</h3>
+                            <p class="team-role">Managing Director</p>
+                            <div class="team-socials">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="d-flex gap-3 mb-3">
-                    <div class="icon-circle"><i class="bi bi-telephone"></i></div>
-                    <div>
-                      <div class="fw-semibold">Phone</div>
-                      <small class="text-muted">+1 (415) 555-0134</small>
+
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop"
+                            alt="CTO" class="team-img">
+                        <div class="team-info">
+                            <h3 class="team-name">Minh-Duc Nguyen</h3>
+                            <p class="team-role">Senior Art Director</p>
+                            <div class="team-socials">
+                                <a href="#"><i class="fab fa-artstation"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="d-flex gap-3">
-                    <div class="icon-circle"><i class="bi bi-geo-alt"></i></div>
-                    <div>
-                      <div class="fw-semibold">Studios</div>
-                      <small class="text-muted">San Francisco · Stockholm · Seoul</small>
-                    </div>
-                  </div>
-                  <small class="text-muted mt-auto">Response within 24 hours.</small>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <!-- Core Values -->
+        <section class="section" style="background: #111;">
+            <div class="container">
+                <h2 class="section-title condensed text-center" style="margin-bottom: 50px;">OUR CORE VALUES</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+                    <div data-aos="fade-up">
+                        <i class="fas fa-handshake fa-3x"
+                            style="color: var(--primary-orange); margin-bottom: 20px;"></i>
+                        <h3 style="color: #fff;">TRUST</h3>
+                        <p style="color: #999;">We build lasting relationships through transparency.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-fire fa-3x" style="color: var(--primary-orange); margin-bottom: 20px;"></i>
+                        <h3 style="color: #fff;">PASSION</h3>
+                        <p style="color: #999;">We are gamers at heart, driven by creativity.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-medal fa-3x" style="color: var(--primary-orange); margin-bottom: 20px;"></i>
+                        <h3 style="color: #fff;">EXCELLENCE</h3>
+                        <p style="color: #999;">We strive for AAA quality in every pixel.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-users fa-3x" style="color: var(--primary-orange); margin-bottom: 20px;"></i>
+                        <h3 style="color: #fff;">DIVERSITY</h3>
+                        <p style="color: #999;">Our strength lies in our global, diverse talent.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Life at Studio Gallery -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title condensed text-center">LIFE AT GAME DEV STUDIO</h2>
+                <div class="gallery-grid"
+                    style="display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 200px); gap: 15px; margin-top: 40px;">
+                    <div
+                        style="grid-column: span 2; grid-row: span 2; background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop') center/cover;">
+                    </div>
+                    <div
+                        style="background: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2670&auto=format&fit=crop') center/cover;">
+                    </div>
+                    <div
+                        style="background: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2670&auto=format&fit=crop') center/cover;">
+                    </div>
+                    <div
+                        style="grid-column: span 2; background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2670&auto=format&fit=crop') center/cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="border-top bg-surface-2">
-      <div class="container py-5">
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <div class="d-flex align-items-center gap-2 mb-3">
-              <span class="logo-mark">G</span>
-              <span class="fw-bold">Game Dev Studio</span>
+    <!-- Footer -->
+    <footer class="site-footer-extended">
+        <div class="container footer-grid">
+            <div class="footer-cta">
+                <h2 class="footer-heading condensed">GET IN TOUCH</h2>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-artstation"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <a href="contact.html" class="btn btn-outline-orange">CONTACT US</a>
             </div>
-            <p class="text-muted">
-              A modern game development studio crafting memorable experiences for
-              global audiences.
-            </p>
-            <div class="d-flex gap-2">
-              <a class="btn btn-outline-primary btn-sm" href="#" title="Steam"><i class="bi bi-steam"></i></a>
-              <a class="btn btn-outline-primary btn-sm" href="#" title="Discord"><i class="bi bi-discord"></i></a>
-              <a class="btn btn-outline-primary btn-sm" href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
-              <a class="btn btn-outline-primary btn-sm" href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
-              <a class="btn btn-outline-primary btn-sm" href="#" title="GitHub"><i class="bi bi-github"></i></a>
+            <div class="footer-links-col">
+                <h4>SERVICES</h4>
+                <ul>
+                    <li><a href="services.html#game-dev">GAME DEVELOPMENT</a></li>
+                    <li><a href="services.html#engineering">ENGINEERING</a></li>
+                    <li><a href="services.html#art">ART PRODUCTION</a></li>
+                </ul>
             </div>
-          </div>
-          <div class="col-6 col-lg-2">
-            <h6 class="text-uppercase text-muted small">Studio</h6>
-            <ul class="list-unstyled">
-              <li><a class="footer-link" href="about.html">About</a></li>
-              <li><a class="footer-link" href="team.html">Team</a></li>
-              <li><a class="footer-link" href="careers.html">Careers</a></li>
-              <li><a class="footer-link" href="press-kit.html">Press Kit</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-lg-3">
-            <h6 class="text-uppercase text-muted small">Work</h6>
-            <ul class="list-unstyled">
-              <li><a class="footer-link" href="portfolio.html">Portfolio</a></li>
-              <li><a class="footer-link" href="services.html">Services</a></li>
-              <li><a class="footer-link" href="blog.html">Blog</a></li>
-              <li><a class="footer-link" href="faq.html">FAQ</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <h6 class="text-uppercase text-muted small">Get in touch</h6>
-            <p class="text-muted mb-2">hello@gamedevstudio.com</p>
-            <p class="text-muted mb-3">San Francisco · Stockholm · Seoul</p>
-            <a class="btn btn-primary btn-sm" href="contact.html">Contact Us</a>
-          </div>
+            <div class="footer-links-col">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="portfolio.html">OUR WORKS</a></li>
+                    <li><a href="blog.html">NEWS</a></li>
+                    <li><a href="press-kit.html">MEDIA KIT</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="careers.html">CAREERS</a></li>
+                    <li><a href="contact.html">OFFICES</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="divider"></div>
-        <div class="d-flex flex-wrap justify-content-between text-muted small">
-          <span>© 2026 Game Dev Studio. All rights reserved.</span>
-          <span>Privacy · Terms · Accessibility</span>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Game Dev Studio. All rights reserved.</p>
         </div>
-      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+    <!-- Theme Switcher -->
+    <button class="theme-switcher" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>

@@ -1,396 +1,316 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" data-bs-theme="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Game Dev Studio | Services</title>
-    <meta
-      name="description"
-      content="Game Dev Studio services include game design, UI/UX, art direction, engineering, QA, and live ops."
-    />
-    <meta
-      name="keywords"
-      content="game services, game design, UI UX, live ops, art, engineering"
-    />
-    <meta name="author" content="Game Dev Studio" />
-    <meta property="og:title" content="Game Dev Studio | Services" />
-    <meta
-      property="og:description"
-      content="End-to-end game development services for studios and publishers."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80"
-    />
-    <link rel="canonical" href="https://gamedevstudio.com/services" />
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+<html lang="en" data-theme="dark" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Game Dev Studio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-            <span class="logo-mark">G</span>
-            <span class="fw-bold">Game Dev Studio</span>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNav"
-            aria-controls="mainNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home 1</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="home-2.html">Home 2</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="team.html">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  More
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
-                  <li><a class="dropdown-item" href="press-kit.html">Press Kit</a></li>
-                  <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
-                </ul>
-              </li>
-            </ul>
-            <div class="d-flex gap-2 align-items-center">
-              <button
-                class="btn btn-sm theme-toggle d-inline-flex align-items-center gap-2"
-                type="button"
-                aria-pressed="false"
-              >
-                <i class="bi bi-moon-stars"></i>
-              </button>
-              <a class="btn btn-outline-primary btn-sm" href="login.html">Login</a>
-              <a class="btn btn-primary btn-sm" href="register.html">Register</a>
-            </div>
-          </div>
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <style>
+        .service-detail {
+            margin-bottom: 80px;
+        }
+
+        .service-detail h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-orange);
+        }
+
+        .service-detail p {
+            font-size: 1.1rem;
+            color: #ccc;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            color: var(--primary-orange);
+            font-size: 1.5rem;
+        }
+
+        .service-hero {
+            position: relative;
+            height: 350px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .service-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-left">
+            <button class="menu-btn"><span
+                    class="hamburger-icon"><span></span><span></span><span></span></span>MENU</button>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="home-2.html" class="nav-link">HOME 2</a>
+            <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+            <a href="about.html" class="nav-link">ABOUT</a>
+            <a href="contact.html" class="nav-link">CONTACT</a>
         </div>
-      </nav>
+        <div class="header-center"><a href="index.html" class="logo-text">GAME DEV STUDIO</a></div>
+        <div class="header-right">
+            <a href="login.html" class="auth-link">LOGIN</a>
+            <a href="register.html" class="auth-link">REGISTER</a>
+            <a href="dashboard.html" class="auth-link dashboard-link">DASHBOARD</a>
+        </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-6 text-center">
-              <span class="badge badge-soft mb-3">Services</span>
-              <h1 class="display-5 fw-bold mb-3">Full-spectrum<br>game development</h1>
-              <p class="text-muted lead">
-                From ideation to launch, our services are designed to meet partners at
-                every phase of production.
-              </p>
-              <div class="d-flex justify-content-center">
-                <a class="btn btn-primary btn-lg" href="contact.html">Request a Proposal</a>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <img
-                class="hero-image"
-                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80"
-                alt="Game development services"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    <main style="padding-top: 100px;">
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title condensed" data-aos="fade-down">OUR EXPERTISE</h1>
 
-      <section class="section bg-surface-2">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <div class="stat-card h-100 text-center">
-                <div class="icon-circle mb-3 mx-auto"><i class="bi bi-palette2"></i></div>
-                <h5>Art Direction</h5>
-                <p class="text-muted mb-0">
-                  Concept art, environment design, character pipelines, and lighting.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="stat-card h-100 text-center">
-                <div class="icon-circle mb-3 mx-auto"><i class="bi bi-kanban"></i></div>
-                <h5>Game Design</h5>
-                <p class="text-muted mb-0">
-                  Gameplay systems, economy balance, and content planning.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="stat-card h-100 text-center">
-                <div class="icon-circle mb-3 mx-auto"><i class="bi bi-layout-text-window"></i></div>
-                <h5>UI/UX</h5>
-                <p class="text-muted mb-0">
-                  Player journeys, HUD design, and interaction systems.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="stat-card h-100 text-center">
-                <div class="icon-circle mb-3 mx-auto"><i class="bi bi-code-slash"></i></div>
-                <h5>Engineering</h5>
-                <p class="text-muted mb-0">
-                  Engine architecture, netcode, and live ops infrastructure.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="stat-card h-100 text-center">
-                <div class="icon-circle mb-3 mx-auto"><i class="bi bi-clipboard-check"></i></div>
-                <h5>QA & Testing</h5>
-                <p class="text-muted mb-0">
-                  Automated test suites, playtesting, and performance profiling.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="stat-card h-100 text-center">
-                <div class="icon-circle mb-3 mx-auto"><i class="bi bi-graph-up-arrow"></i></div>
-                <h5>Live Ops</h5>
-                <p class="text-muted mb-0">
-                  Seasonal content, analytics, and retention optimization.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                <!-- Game Development with image -->
+                <div class="service-detail" data-aos="fade-up">
+                    <div class="service-hero">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2671&auto=format&fit=crop"
+                            alt="Game Development">
+                        <div class="service-hero-overlay">
+                            <h2 style="color: #fff;">Game Development</h2>
+                        </div>
+                    </div>
+                    <p>We provide full-cycle game development services, from initial concept to final gold master. Our
+                        team can handle porting, remasters, and co-development to extend your team's capabilities.</p>
+                    <div class="feature-grid">
+                        <div class="feature-item"><i class="fas fa-gamepad feature-icon"></i><span>Console
+                                Porting</span></div>
+                        <div class="feature-item"><i class="fas fa-mobile-alt feature-icon"></i><span>Mobile
+                                Adaptation</span></div>
+                        <div class="feature-item"><i class="fas fa-code feature-icon"></i><span>Engineering
+                                Support</span></div>
+                        <div class="feature-item"><i class="fas fa-users-cog feature-icon"></i><span>Live Ops</span>
+                        </div>
+                    </div>
+                </div>
 
-      <section class="section">
-        <div class="container">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6 text-center">
-              <h2 class="section-title mb-3">Our process</h2>
-              <p class="text-muted">
-                We blend agile rituals with creative exploration to keep the vision
-                aligned and the team focused.
-              </p>
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex gap-3 mb-4 justify-content-center">
-                    <div class="icon-circle"><i class="bi bi-1-circle"></i></div>
-                    <div>
-                      <h6 class="mb-1">Discovery</h6>
-                      <p class="text-muted mb-0">
-                        Define scope, audience, and success metrics together.
-                      </p>
+                <!-- Art Production with image -->
+                <div class="service-detail" data-aos="fade-up">
+                    <div class="service-hero">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop"
+                            alt="Art Production">
+                        <div class="service-hero-overlay">
+                            <h2 style="color: #fff;">Art Production</h2>
+                        </div>
                     </div>
-                  </div>
-                  <div class="d-flex gap-3 mb-4 justify-content-center">
-                    <div class="icon-circle"><i class="bi bi-2-circle"></i></div>
-                    <div>
-                      <h6 class="mb-1">Prototype</h6>
-                      <p class="text-muted mb-0">
-                        Build and test core loops to validate gameplay early.
-                      </p>
+                    <p>Our world-class artists create stunning 2D and 3D assets that breathe life into your game worlds.
+                        From character modeling to environment design, we do it all.</p>
+                    <div class="feature-grid">
+                        <div class="feature-item"><i class="fas fa-paint-brush feature-icon"></i><span>Concept
+                                Art</span></div>
+                        <div class="feature-item"><i class="fas fa-cube feature-icon"></i><span>3D Modeling</span></div>
+                        <div class="feature-item"><i class="fas fa-video feature-icon"></i><span>Animation</span></div>
+                        <div class="feature-item"><i class="fas fa-magic feature-icon"></i><span>VFX</span></div>
                     </div>
-                  </div>
-                  <div class="d-flex gap-3 justify-content-center">
-                    <div class="icon-circle"><i class="bi bi-3-circle"></i></div>
-                    <div>
-                      <h6 class="mb-1">Scale</h6>
-                      <p class="text-muted mb-0">
-                        Expand content, polish UX, and prepare for launch.
-                      </p>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <img
-                class="hero-image"
-                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80"
-                alt="Game design process planning"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="section bg-surface-2">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-lg-4 text-center">
-              <h2 class="section-title mb-3">Tech stack</h2>
-              <p class="text-muted">
-                We tailor tools for each project, with proven pipelines and partner
-                integrations.
-              </p>
-            </div>
-            <div class="col-lg-8">
-              <div class="row g-3">
-                <div class="col-sm-6">
-                  <div class="stat-card text-center">Unreal Engine · Unity</div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="stat-card text-center">Photon · PlayFab · AWS</div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="stat-card text-center">Figma · Adobe CC</div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="stat-card text-center">Jira · Notion · Miro</div>
-                </div>
-              </div>
-              <div class="d-flex justify-content-center">
-                <a class="btn btn-outline-primary mt-4" href="contact.html">
-                  Discuss Your Stack
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section bg-surface-2">
-        <div class="container">
-          <div class="row g-4 align-items-stretch">
-            <div class="col-lg-6">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                  <span class="badge badge-soft mb-3">Contact</span>
-                  <h2 class="section-title mb-3 text-center">Let's build<br>your next game</h2>
-                  <p class="text-muted">
-                    Share your timeline, platform, and vision. We'll reply within 24
-                    hours.
-                  </p>
-                  <div class="mt-auto d-flex flex-wrap gap-3 justify-content-center">
-                    <a class="btn btn-primary" href="contact.html">Contact Us</a>
-                    <a class="btn btn-outline-primary" href="portfolio.html">View Work</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="mb-3">Studio contact</h5>
-                  <div class="d-flex gap-3 mb-3">
-                    <div class="icon-circle"><i class="bi bi-envelope"></i></div>
-                    <div>
-                      <div class="fw-semibold">Email</div>
-                      <small class="text-muted">hello@gamedevstudio.com</small>
+                <!-- Engineering with image -->
+                <div class="service-detail" data-aos="fade-up">
+                    <div class="service-hero">
+                        <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2578&auto=format&fit=crop"
+                            alt="Engineering Services">
+                        <div class="service-hero-overlay">
+                            <h2 style="color: #fff;">Engineering Services</h2>
+                        </div>
                     </div>
-                  </div>
-                  <div class="d-flex gap-3 mb-3">
-                    <div class="icon-circle"><i class="bi bi-telephone"></i></div>
-                    <div>
-                      <div class="fw-semibold">Phone</div>
-                      <small class="text-muted">+1 (415) 555-0134</small>
+                    <p>Our engineers specialize in optimization, porting, and building robust game infrastructure. We
+                        leverage cutting-edge tools and pipelines to deliver performance-critical solutions.</p>
+                    <div class="feature-grid">
+                        <div class="feature-item"><i class="fas fa-tachometer-alt feature-icon"></i><span>Performance
+                                Optimization</span></div>
+                        <div class="feature-item"><i class="fas fa-exchange-alt feature-icon"></i><span>Cross-Platform
+                                Porting</span></div>
+                        <div class="feature-item"><i class="fas fa-server feature-icon"></i><span>Backend
+                                Infrastructure</span></div>
+                        <div class="feature-item"><i class="fas fa-bug feature-icon"></i><span>QA & Testing</span></div>
                     </div>
-                  </div>
-                  <div class="d-flex gap-3">
-                    <div class="icon-circle"><i class="bi bi-geo-alt"></i></div>
-                    <div>
-                      <div class="fw-semibold">Studios</div>
-                      <small class="text-muted">San Francisco · Stockholm · Seoul</small>
-                    </div>
-                  </div>
-                  <small class="text-muted mt-auto">Response within 24 hours.</small>
                 </div>
-              </div>
+
+                <!-- Our Process -->
+                <div class="service-detail" data-aos="fade-up" style="margin-top: 100px;">
+                    <h2 class="text-center">OUR PROCESS</h2>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 50px; text-align: center; gap: 20px;">
+                        <div style="flex: 1; min-width: 200px;">
+                            <div
+                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
+                                <span
+                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">01</span>
+                            </div>
+                            <h3 style="color: #fff;">CONSULT</h3>
+                            <p style="color: #777;">Understanding requirements.</p>
+                        </div>
+                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <div
+                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
+                                <span
+                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">02</span>
+                            </div>
+                            <h3 style="color: #fff;">PROTOTYPE</h3>
+                            <p style="color: #777;">Vertical slice creation.</p>
+                        </div>
+                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <div
+                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
+                                <span
+                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">03</span>
+                            </div>
+                            <h3 style="color: #fff;">PRODUCE</h3>
+                            <p style="color: #777;">Full-scale development.</p>
+                        </div>
+                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <div
+                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
+                                <span
+                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">04</span>
+                            </div>
+                            <h3 style="color: #fff;">POLISH</h3>
+                            <p style="color: #777;">QA and optimization.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="service-detail" data-aos="fade-up" style="margin-top: 100px;">
+                    <h2 class="text-center">TECHNOLOGY STACK</h2>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 30px; margin-top: 40px; text-align: center;">
+                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
+                                class="fas fa-layer-group fa-3x" style="color: #fff;"></i>
+                            <p style="margin-top: 10px; color: #ccc;">Unreal 5</p>
+                        </div>
+                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
+                                class="fas fa-cube fa-3x" style="color: #fff;"></i>
+                            <p style="margin-top: 10px; color: #ccc;">Unity</p>
+                        </div>
+                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
+                                class="fas fa-code fa-3x" style="color: #fff;"></i>
+                            <p style="margin-top: 10px; color: #ccc;">C++</p>
+                        </div>
+                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
+                                class="fas fa-pencil-ruler fa-3x" style="color: #fff;"></i>
+                            <p style="margin-top: 10px; color: #ccc;">Maya</p>
+                        </div>
+                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
+                                class="fas fa-paint-brush fa-3x" style="color: #fff;"></i>
+                            <p style="margin-top: 10px; color: #ccc;">Photoshop</p>
+                        </div>
+                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
+                                class="fas fa-server fa-3x" style="color: #fff;"></i>
+                            <p style="margin-top: 10px; color: #ccc;">AWS</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
 
-    <footer class="border-top bg-surface-2">
-      <div class="container py-5">
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <div class="d-flex align-items-center gap-2 mb-3">
-              <span class="logo-mark">G</span>
-              <span class="fw-bold">Game Dev Studio</span>
+    <!-- Footer -->
+    <footer class="site-footer-extended">
+        <div class="container footer-grid">
+            <div class="footer-cta">
+                <h2 class="footer-heading condensed">GET IN TOUCH</h2>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-artstation"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <a href="contact.html" class="btn btn-outline-orange">CONTACT US</a>
             </div>
-            <p class="text-muted">
-              A modern game development studio crafting memorable experiences for
-              global audiences.
-            </p>
-            <div class="d-flex gap-2">
-              <a class="btn btn-outline-primary btn-sm" href="#" title="Steam"><i class="bi bi-steam"></i></a>
-              <a class="btn btn-outline-primary btn-sm" href="#" title="Discord"><i class="bi bi-discord"></i></a>
-              <a class="btn btn-outline-primary btn-sm" href="#" title="Twitter"><i class="bi bi-twitter"></i></a>
-              <a class="btn btn-outline-primary btn-sm" href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
-              <a class="btn btn-outline-primary btn-sm" href="#" title="GitHub"><i class="bi bi-github"></i></a>
+            <div class="footer-links-col">
+                <h4>SERVICES</h4>
+                <ul>
+                    <li><a href="services.html#game-dev">GAME DEVELOPMENT</a></li>
+                    <li><a href="services.html#engineering">ENGINEERING</a></li>
+                    <li><a href="services.html#art">ART PRODUCTION</a></li>
+                </ul>
             </div>
-          </div>
-          <div class="col-6 col-lg-2">
-            <h6 class="text-uppercase text-muted small">Studio</h6>
-            <ul class="list-unstyled">
-              <li><a class="footer-link" href="about.html">About</a></li>
-              <li><a class="footer-link" href="team.html">Team</a></li>
-              <li><a class="footer-link" href="careers.html">Careers</a></li>
-              <li><a class="footer-link" href="press-kit.html">Press Kit</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-lg-3">
-            <h6 class="text-uppercase text-muted small">Work</h6>
-            <ul class="list-unstyled">
-              <li><a class="footer-link" href="portfolio.html">Portfolio</a></li>
-              <li><a class="footer-link" href="services.html">Services</a></li>
-              <li><a class="footer-link" href="blog.html">Blog</a></li>
-              <li><a class="footer-link" href="faq.html">FAQ</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3">
-            <h6 class="text-uppercase text-muted small">Get in touch</h6>
-            <p class="text-muted mb-2">hello@gamedevstudio.com</p>
-            <p class="text-muted mb-3">San Francisco · Stockholm · Seoul</p>
-            <a class="btn btn-primary btn-sm" href="contact.html">Contact Us</a>
-          </div>
+            <div class="footer-links-col">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="portfolio.html">OUR WORKS</a></li>
+                    <li><a href="blog.html">NEWS</a></li>
+                    <li><a href="press-kit.html">MEDIA KIT</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-col">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="careers.html">CAREERS</a></li>
+                    <li><a href="contact.html">OFFICES</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="divider"></div>
-        <div class="d-flex flex-wrap justify-content-between text-muted small">
-          <span>© 2026 Game Dev Studio. All rights reserved.</span>
-          <span>Privacy · Terms · Accessibility</span>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Game Dev Studio. All rights reserved.</p>
         </div>
-      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+    <!-- Theme Switcher -->
+    <button class="theme-switcher" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>
