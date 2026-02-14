@@ -1,6 +1,5 @@
-/* Global Variables - Dark Theme (Default) */
-:root,
-[data-theme="dark"] {
+/* Global Variables - Dark Theme Only */
+:root {
     --primary-orange: #FF5500;
     --bg-primary: #0d0d0d;
     --bg-secondary: #1a1a1a;
@@ -16,33 +15,6 @@
     --section-spacing: 80px;
     --card-gap: 24px;
     --element-spacing: 20px;
-}
-
-/* Light Theme */
-[data-theme="light"] {
-    --primary-orange: #FF5500;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f5f5f5;
-    --bg-tertiary: #e8e8e8;
-    --text-primary: #1a1a1a;
-    --text-secondary: #4a4a4a;
-    --text-muted: #888888;
-    --border-color: #dddddd;
-    --font-heading: 'Oswald', sans-serif;
-    --font-body: 'Roboto', sans-serif;
-    --container-width: 1400px;
-    --container-padding: 20px;
-    --section-spacing: 80px;
-    --card-gap: 24px;
-    --element-spacing: 20px;
-}
-
-/* Light Theme Header Styles */
-[data-theme="light"] .site-header {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
-    border-bottom: 1px solid var(--border-color);
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
