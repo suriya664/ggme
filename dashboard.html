@@ -132,6 +132,129 @@
             color: orange;
         }
 
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .chart-section {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .chart-placeholder {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 150px;
+            gap: 10px;
+        }
+
+        .chart-bar {
+            flex: 1;
+            border-radius: 4px 4px 0 0;
+            min-height: 20px;
+        }
+
+        .activity-feed {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
+
+        .activity-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .activity-content {
+            flex: 1;
+        }
+
+        .activity-title {
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .activity-time {
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        .team-performance {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .performance-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .performance-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .performance-name {
+            width: 150px;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .performance-bar {
+            flex: 1;
+            height: 8px;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .performance-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .performance-value {
+            width: 50px;
+            text-align: right;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
         /* Dashboard hamburger for mobile/tablet */
         .dashboard-hamburger {
             display: none;
@@ -140,32 +263,13 @@
             color: #fff;
             font-size: 1.5rem;
             cursor: pointer;
-            padding: 10px;
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            z-index: 1001;
-            background: #050505;
-            border-radius: 4px;
-            border: 1px solid #222;
-        }
-
-        @media (max-width: 768px) {
-            .dashboard-hamburger {
-                display: block;
             }
 
-            .sidebar {
-                position: fixed;
-                top: 0;
-                left: 0;
-                height: 100vh;
-                z-index: 1000;
-                transform: translateX(-100%);
-            }
-
-            .sidebar.open {
-                transform: translateX(0);
+            .stat-card {
+                background: #1a1a1a;
+                padding: 25px;
+                border-radius: 8px;
+                border: 1px solid #333;
             }
 
             .sidebar-overlay {
@@ -199,6 +303,34 @@
             .project-table th,
             .project-table td {
                 padding: 10px 8px;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .chart-placeholder {
+                height: 120px;
+            }
+
+            .performance-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .performance-name {
+                width: auto;
+            }
+
+            .performance-bar {
+                width: 100%;
+            }
+
+            .performance-value {
+                width: auto;
+                text-align: left;
             }
         }
 
@@ -240,45 +372,27 @@
             <div class="nav-item"><i class="fas fa-project-diagram"></i> Projects</div>
             <div class="nav-item"><i class="fas fa-users"></i> Team</div>
             <div class="nav-item"><i class="fas fa-chart-line"></i> Analytics</div>
-            <div class="nav-item" style="margin-top: auto;"><i class="fas fa-sign-out-alt"></i> Logout</div>
+            <div class="nav-item" style="margin-top: auto;" onclick="window.location.href='index.html'"><i class="fas fa-sign-out-alt"></i> Logout</div>
         </aside>
 
         <main class="dashboard-content">
-            <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-                <h1 style="font-family: 'Oswald'; font-size: 2rem;">WELCOME BACK, ADMIN</h1>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <button class="theme-switcher" style="position: static; width: 40px; height: 40px; font-size: 1rem;"
-                        aria-label="Toggle theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <i class="fas fa-bell" style="font-size: 1.2rem; color: #777;"></i>
-                    <div style="width: 40px; height: 40px; background: #333; border-radius: 50%;"></div>
-                </div>
-            </header>
-
             <div class="stats-grid">
-                <header class="site-header">
-                    <div class="header-left">
-                        <a href="index.html" class="brand-logo">GAME DEV STUDIO</a>
-                        <button class="menu-btn"><span class="hamburger-icon"><span></span><span></span><span></span></span>MENU</button>
-                    </div>
-
-                    <div class="header-center">
-                        <nav class="main-nav">
-                            <a href="index.html" class="nav-link">HOME</a>
-                            <a href="home-2.html" class="nav-link">HOME 2</a>
-                            <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
-                            <a href="services.html" class="nav-link">SERVICES</a>
-                            <a href="contact.html" class="nav-link">CONTACT</a>
-                        </nav>
-                    </div>
-
-                    <div class="header-right">
-                        <a href="login.html" class="auth-link">LOGIN</a>
-                        <a href="register.html" class="auth-link">REGISTER</a>
-                        <a href="dashboard.html" class="auth-link dashboard-link active">DASHBOARD</a>
-                    </div>
-                </header>
+                <div class="stat-card">
+                    <div class="stat-value">24</div>
+                    <div class="stat-label">ACTIVE PROJECTS</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">142</div>
+                    <div class="stat-label">TEAM MEMBERS</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$847K</div>
+                    <div class="stat-label">REVENUE</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">SATISFACTION</div>
+                </div>
             </div>
 
             <div class="recent-projects">
@@ -313,6 +427,77 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="chart-section">
+                    <h3 style="font-family: 'Oswald'; font-size: 1.3rem; margin-bottom: 20px; color: #fff;">PROJECT PROGRESS</h3>
+                    <div class="chart-placeholder">
+                        <div class="chart-bar" style="height: 80%; background: var(--primary-orange);"></div>
+                        <div class="chart-bar" style="height: 60%; background: #666;"></div>
+                        <div class="chart-bar" style="height: 90%; background: #666;"></div>
+                        <div class="chart-bar" style="height: 45%; background: #666;"></div>
+                        <div class="chart-bar" style="height: 70%; background: #666;"></div>
+                    </div>
+                </div>
+
+                <div class="activity-feed">
+                    <h3 style="font-family: 'Oswald'; font-size: 1.3rem; margin-bottom: 20px; color: #fff;">RECENT ACTIVITY</h3>
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: var(--primary-orange);">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">Code deployment completed</div>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: #4CAF50;">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">Project milestone reached</div>
+                            <div class="activity-time">5 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon" style="background: #2196F3;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">New team member joined</div>
+                            <div class="activity-time">1 day ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-performance">
+                <h3 style="font-family: 'Oswald'; font-size: 1.3rem; margin-bottom: 20px; color: #fff;">TEAM PERFORMANCE</h3>
+                <div class="performance-grid">
+                    <div class="performance-item">
+                        <div class="performance-name">Development Team</div>
+                        <div class="performance-bar">
+                            <div class="performance-fill" style="width: 85%; background: var(--primary-orange);"></div>
+                        </div>
+                        <div class="performance-value">85%</div>
+                    </div>
+                    <div class="performance-item">
+                        <div class="performance-name">Design Team</div>
+                        <div class="performance-bar">
+                            <div class="performance-fill" style="width: 92%; background: #4CAF50;"></div>
+                        </div>
+                        <div class="performance-value">92%</div>
+                    </div>
+                    <div class="performance-item">
+                        <div class="performance-name">QA Team</div>
+                        <div class="performance-bar">
+                            <div class="performance-fill" style="width: 78%; background: #2196F3;"></div>
+                        </div>
+                        <div class="performance-value">78%</div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
