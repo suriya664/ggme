@@ -80,14 +80,20 @@
 <body>
     <header class="site-header">
         <div class="header-left">
+            <a href="index.html" class="brand-logo">GAME DEV STUDIO</a>
             <button class="menu-btn"><span class="hamburger-icon"><span></span><span></span><span></span></span>MENU</button>
-            <a href="index.html" class="nav-link">HOME</a>
-            <a href="home-2.html" class="nav-link">HOME 2</a>
-            <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
-            <a href="services.html" class="nav-link">SERVICES</a>
-            <a href="contact.html" class="nav-link">CONTACT</a>
         </div>
-        <div class="header-center"><a href="index.html" class="logo-text">GAME DEV STUDIO</a></div>
+
+        <div class="header-center">
+            <nav class="main-nav">
+                 <a href="index.html" class="nav-link active">GAME</a>
+                <a href="home-2.html" class="nav-link">HOME</a>
+                <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+                <a href="services.html" class="nav-link active">SERVICES</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
+        </div>
+
         <div class="header-right">
             <a href="login.html" class="auth-link">LOGIN</a>
             <a href="register.html" class="auth-link">REGISTER</a>
@@ -177,7 +183,7 @@
                                     style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">01</span>
                             </div>
                             <h3 style="color: #fff;">CONSULT</h3>
-                            <p style="color: #777;">Understanding requirements.</p>
+                            <p style="color: #777;">Requirements.</p>
                         </div>
                         <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
                         </div>
@@ -253,6 +259,9 @@
     <!-- Footer -->
     <footer class="site-footer-extended">
         <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3 class="brand-logo">GAME DEV STUDIO</h3>
+            </div>
             <div class="footer-cta">
                 <h2 class="footer-heading condensed">GET IN TOUCH</h2>
                 <div class="footer-socials">

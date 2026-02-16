@@ -23,17 +23,19 @@
     <!-- Header (Screenshot 1) -->
     <header class="site-header">
         <div class="header-left">
+            <a href="index.html" class="brand-logo">GAME DEV STUDIO</a>
             <button class="menu-btn"><span
                     class="hamburger-icon"><span></span><span></span><span></span></span>MENU</button>
-            <a href="index.html" class="nav-link">HOME</a>
-            <a href="home-2.html" class="nav-link">HOME 2</a>
-            <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
-            <a href="services.html" class="nav-link">SERVICES</a>
-            <a href="contact.html" class="nav-link">CONTACT</a>
         </div>
 
         <div class="header-center">
-            <a href="index.html" class="logo-text">GAME DEV STUDIO</a>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">GAME</a>
+                <a href="home-2.html" class="nav-link">HOME</a>
+                <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+                <a href="services.html" class="nav-link">SERVICES</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
         </div>
 
         <div class="header-right">
@@ -123,6 +125,32 @@
                     </div>
                     <button class="card-action">→</button>
                 </div>
+
+                <!-- Card 5: Dark Souls Remake -->
+                <div class="story-card"
+                    style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop');">
+                    <div class="card-badges">
+                        <span class="badge">SUCCESS STORIES</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Dark Souls Remake</h3>
+                        <p class="studio-name">FromSoftware</p>
+                    </div>
+                    <button class="card-action">→</button>
+                </div>
+
+                <!-- Card 6: VR Experience -->
+                <div class="story-card"
+                    style="background-image: url('https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=2678&auto=format&fit=crop');">
+                    <div class="card-badges">
+                        <span class="badge">SUCCESS STORIES</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>VR Experience</h3>
+                        <p class="studio-name">Innovation Lab</p>
+                    </div>
+                    <button class="card-action">→</button>
+                </div>
             </div>
 
             <div class="actions text-center" style="margin-top: 50px;">
@@ -130,21 +158,28 @@
             </div>
         </section>
 
-        <!-- Building Worlds (Screenshot 4) -->
-        <section class="section building-worlds">
-            <div class="building-bg"></div>
-            <div class="container building-content">
-                <div class="text-block">
-                    <h2 class="section-title condensed text-left">BUILDING WORLDS<br>THAT INSPIRE</h2>
-                    <p>
-                        Founded in 2004, Virtuos is one of the largest independent video game development companies. We
-                        are headquartered in Singapore with offices in Asia, Europe, and North America. Specializing in
-                        full-cycle game development and art production, we have delivered high-quality content for more
-                        than 1,500 console, PC, and mobile games. Our clients include 23 of the top 25 gaming companies
-                        worldwide.
-                    </p>
+        
+            <!-- Alumni Section -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <h2 class="section-title condensed">ALOFMN IT</h2>
+                        <p class="section-subtitle">Success stories from our talented alumni network</p>
+                    </div>
+                    
+                    <div class="alumni-content" style="display: flex; align-items: center; gap: 40px; margin: 60px 0;">
+                        <div class="alumni-text" style="flex: 1;">
+                            <p>Meet our successful alumni who have gone on to work at leading game studios worldwide. Their achievements showcase the quality of training and mentorship we provide at Game Dev Studio.</p>
+                        </div>
+                        
+                        <div class="alumni-image">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2671&auto=format&fit=crop"
+                                alt="Game Development Alumni"
+                                style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
 
             <div class="stats-bar">
                 <div class="stat">
@@ -250,6 +285,9 @@
     <!-- Footer (Screenshot 8) -->
     <footer class="site-footer-extended">
         <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3 class="brand-logo">GAME DEV STUDIO</h3>
+            </div>
             <div class="footer-cta">
                 <h2 class="footer-heading condensed">GET IN TOUCH</h2>
                 <div class="footer-socials">

@@ -20,17 +20,20 @@
     <!-- Header -->
     <header class="site-header">
         <div class="header-left">
-            <button class="menu-btn"><span
-                    class="hamburger-icon"><span></span><span></span><span></span></span>MENU</button>
-            <a href="index.html" class="nav-link">HOME</a>
-            <a href="home-2.html" class="nav-link">HOME 2</a>
-            <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
-            <a href="services.html" class="nav-link">SERVICES</a>
-            <a href="contact.html" class="nav-link">CONTACT</a>
+            <a href="index.html" class="brand-logo">GAME DEV STUDIO</a>
+            <button class="menu-btn"><span class="hamburger-icon"><span></span><span></span><span></span></span>MENU</button>
         </div>
+
         <div class="header-center">
-            <a href="index.html" class="logo-text">GAME DEV STUDIO</a>
+            <nav class="main-nav">
+                 <a href="index.html" class="nav-link active">GAME</a>
+                <a href="home-2.html" class="nav-link">HOME</a>
+                <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
+                <a href="services.html" class="nav-link">SERVICES</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
         </div>
+
         <div class="header-right">
             <a href="login.html" class="auth-link">LOGIN</a>
             <a href="register.html" class="auth-link">REGISTER</a>
@@ -52,37 +55,85 @@
             </div>
         </section>
 
+        <!-- About Section -->
+        <section class="section" style="background: #0d0d0d;">
+            <div class="container">
+                <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+                    <h2 class="section-title condensed" style="color: #fff; margin-bottom: 30px;">BUILDING WORLDS<br>THAT INSPIRE</h2>
+                    <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8;">
+                        Founded in 2004, Virtuos is one of the largest independent video game development companies. We are headquartered in Singapore with offices in Asia, Europe, and North America. Specializing in full-cycle game development and art production, we have delivered high-quality content for more than 1,500 console, PC, and mobile games. Our clients include 23 of the top 25 gaming companies worldwide.
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <!-- Success Stories Grid (Different from Carousel) -->
         <section class="section">
             <div class="container">
                 <h2 class="section-title condensed text-center" style="margin-bottom: 60px;">RECENT RELEASES</h2>
-                <div class="clients-grid"
-                    style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); align-items: stretch;">
+                <div class="stories-carousel">
 
-                    <div class="story-card"
-                        style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2670&auto=format&fit=crop'); min-height: 400px;">
+                    <div class="story-card" style="background-image: url('https://m.media-amazon.com/images/M/MV5BOGIxMDQ0NjUtNGI2Ny00NjU0LWE1YmMtYWEyMThhNTgyZWYxXkEyXkFqcGc@._V1_.jpg');">
                         <div class="card-content">
                             <h3>Project Alpha</h3>
                             <p class="studio-name">Ubisoft</p>
                         </div>
                     </div>
 
-                    <div class="story-card"
-                        style="background-image: url('https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2578&auto=format&fit=crop'); min-height: 400px;">
+                    <div class="story-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsn-KfCO7Gxd_NQHIu-AkIqzkq0vkKNhNvpA&s');">
                         <div class="card-content">
-                            <h3>Cyberpunk Expansion</h3>
+                            <h3>Cyber City</h3>
                             <p class="studio-name">CDPR</p>
                         </div>
                     </div>
 
-                    <div class="story-card"
-                        style="background-image: url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=2665&auto=format&fit=crop'); min-height: 400px;">
+                    <div class="story-card" style="background-image: url('https://media.istockphoto.com/id/1191198570/photo/spaceship-flying-near-an-alien-planetary-system-in-the-background-a-supernova-explosion-3d.jpg?s=612x612&w=0&k=20&c=y5YJH442cPLC3KMh-8LqM_0zSGwmf2-os6VlS4GLnY0=');">
+                        <div class="card-content">
+                            <h3 style="color: #fff;">CONSULT</h3>
+                            <p style="color: #777;">01</p>
+                        </div>
+                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <div
+                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
+                                <span
+                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">02</span>
+                            </div>
+                            <h3 style="color: #fff;">PROTOTYPE</h3>
+                            <p style="color: #777;">Vertical slice creation.</p>
+                        </div>
+                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <div
+                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
+                                <span
+                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">03</span>
+                            </div>
+                            <h3 style="color: #fff;">PRODUCE</h3>
+                            <p style="color: #777;">Full-scale development.</p>
+                        </div>
+                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <div
+                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
+                                <span
+                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">04</span>
+                            </div>
+                            <h3 style="color: #fff;">POLISH</h3>
+                            <p style="color: #777;">QA and optimization.</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e0b7a8?q=80&w=2670&auto=format&fit=crop');">
                         <div class="card-content">
                             <h3>Galactic Wars</h3>
                             <p class="studio-name">EA</p>
                         </div>
                     </div>
-                    <!-- Why Choose Us -->
+                </div>    <!-- Why Choose Us -->
                     <section class="section" style="background: #0d0d0d;">
                         <div class="container">
                             <div class="text-center" style="margin-bottom: 60px;">
@@ -141,7 +192,7 @@
                                         delivered high-quality assets ahead of schedule. Their attention to detail on
                                         the environment art was exceptional."</p>
                                     <div style="display: flex; align-items: center; gap: 15px;">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"
+                                        <img src="https://i.ytimg.com/vi/i04fYvrmMM8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAngH-fWqleT6aCUAzXdFOb9r-eiQ"
                                             style="width: 50px; height: 50px; border-radius: 50%;">
                                         <div>
                                             <h4 style="color: #fff; margin: 0;">John Smith</h4>
@@ -169,11 +220,83 @@
                         </div>
                     </section>
 
+                    <!-- Game Development Alumni -->
+                    <section class="section" style="background: #0d0d0d;">
+                        <div class="container">
+                            <h2 class="section-title condensed text-center" style="margin-bottom: 60px;">GAME DEVELOPMENT ALUMNI</h2>
+                            <p class="text-center" style="color: #ccc; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                                Success stories from our talented alumni network. Meet our successful alumni who have gone on to work at leading game studios worldwide. Their achievements showcase the quality of training and mentorship we provide at Game Dev Studio.
+                            </p>
+                            
+                            <div class="alumni-grid" style="display: flex; flex-direction: column; gap: 60px;">
+                                <!-- Alumni 1 -->
+                                <div class="alumni-item" data-aos="fade-right" style="display: flex; align-items: center; gap: 50px;">
+                                    <div class="alumni-text" style="flex: 1; padding-right: 30px;">
+                                        <h3 style="color: var(--primary-orange); font-family: var(--font-heading); margin-bottom: 15px;">ALEX CHEN</h3>
+                                        <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 20px;">Senior Game Designer • Naughty Dog</h4>
+                                        <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
+                                            "The mentorship and hands-on experience at Game Dev Studio transformed my passion into a profession. Working on real projects prepared me for the fast-paced environment at AAA studios."
+                                        </p>
+                                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                                            <span style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">The Last of Us Part II</span>
+                                            <span style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">Uncharted 4</span>
+                                        </div>
+                                    </div>
+                                    <div class="alumni-image" style="flex: 0 0 400px;">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=300&auto=format&fit=crop" 
+                                             alt="Alex Chen" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                                    </div>
+                                </div>
+
+                                <!-- Alumni 2 -->
+                                <div class="alumni-item" data-aos="fade-left" style="display: flex; align-items: center; gap: 50px; flex-direction: row-reverse;">
+                                    <div class="alumni-text" style="flex: 1; padding-left: 30px;">
+                                        <h3 style="color: var(--primary-orange); font-family: var(--font-heading); margin-bottom: 15px;">MARIA GARCIA</h3>
+                                        <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 20px;">Lead Technical Artist • Riot Games</h4>
+                                        <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
+                                            "The technical art program gave me the perfect blend of artistic vision and technical skills. I now lead the visual effects team for League of Legends champions."
+                                        </p>
+                                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                                            <span style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">League of Legends</span>
+                                            <span style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">Valorant</span>
+                                        </div>
+                                    </div>
+                                    <div class="alumni-image" style="flex: 0 0 400px;">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=300&auto=format&fit=crop" 
+                                             alt="Maria Garcia" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                                    </div>
+                                </div>
+
+                                <!-- Alumni 3 -->
+                                <div class="alumni-item" data-aos="fade-right" style="display: flex; align-items: center; gap: 50px;">
+                                    <div class="alumni-text" style="flex: 1; padding-right: 30px;">
+                                        <h3 style="color: var(--primary-orange); font-family: var(--font-heading); margin-bottom: 15px;">JAMES WILSON</h3>
+                                        <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 20px;">Senior Engine Programmer • Epic Games</h4>
+                                        <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
+                                            "From learning C++ fundamentals to contributing to Unreal Engine 5, Game Dev Studio provided the foundation I needed to work on cutting-edge game technology."
+                                        </p>
+                                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                                            <span style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">Unreal Engine 5</span>
+                                            <span style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">Fortnite</span>
+                                        </div>
+                                    </div>
+                                    <div class="alumni-image" style="flex: 0 0 400px;">
+                                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&h=300&auto=format&fit=crop" 
+                                             alt="James Wilson" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="site-footer-extended">
         <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3 class="brand-logo">GAME DEV STUDIO</h3>
+            </div>
             <div class="footer-cta">
                 <h2 class="footer-heading condensed">GET IN TOUCH</h2>
                 <div class="footer-socials">

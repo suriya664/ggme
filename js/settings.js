@@ -1,4 +1,4 @@
-// Settings System
+// Settings System - DISABLED to prevent overlapping
 (function () {
     'use strict';
 
@@ -9,9 +9,14 @@
     document.documentElement.setAttribute('data-theme', savedTheme);
     document.documentElement.setAttribute('dir', savedDir);
 
-    // Create settings button and sidebar
+    // Settings UI functionality disabled to prevent overlapping issues
+    // Theme switching is now handled by the theme-switcher button in main.js
     function createSettingsUI() {
-        // Settings button
+        // Settings button and sidebar creation disabled
+        return;
+        
+        /* 
+        // Original settings code commented out
         const settingsBtn = document.createElement('button');
         settingsBtn.className = 'settings-btn';
         settingsBtn.innerHTML = '<i class="fas fa-cog"></i>';
@@ -99,6 +104,7 @@
                 sidebar.classList.remove('active');
             }
         });
+        */
     }
 
     // Initialize when DOM is ready

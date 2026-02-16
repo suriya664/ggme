@@ -13,16 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileNav.className = 'mobile-nav-overlay';
                 mobileNav.innerHTML = `
                     <nav class="mobile-nav-content">
-                        <a href="index.html">Home</a>
-                        <a href="portfolio.html">Portfolio</a>
-                        <a href="team.html">Team</a>
-                        <a href="about.html">About</a>
-                        <a href="services.html">Services</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="careers.html">Careers</a>
-                        <a href="faq.html">FAQ</a>
-                        <a href="login.html" style="color: var(--primary-orange);">Login / Dashboard</a>
+                        <a href="index.html">HOME</a>
+                        <a href="home-2.html">HOME 2</a>
+                        <a href="portfolio.html">PORTFOLIO</a>
+                        <a href="services.html">SERVICES</a>
+                        <a href="contact.html">CONTACT</a>
+                        <a href="login.html" style="color: var(--primary-orange);">LOGIN</a>
+                        <a href="register.html" style="color: var(--primary-orange);">REGISTER</a>
+                        <a href="dashboard.html" style="color: var(--primary-orange);">DASHBOARD</a>
                         <button class="close-menu">&times;</button>
                     </nav>
                 `;
