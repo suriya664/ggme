@@ -81,12 +81,13 @@
     <header class="site-header">
         <div class="header-left">
             <a href="index.html" class="brand-logo">GAME DEV STUDIO</a>
-            <button class="menu-btn"><span class="hamburger-icon"><span></span><span></span><span></span></span>MENU</button>
+            <button class="menu-btn"><span
+                    class="hamburger-icon"><span></span><span></span><span></span></span></button>
         </div>
 
         <div class="header-center">
             <nav class="main-nav">
-                 <a href="index.html" class="nav-link active">GAME</a>
+                <a href="index.html" class="nav-link active">GAME</a>
                 <a href="home-2.html" class="nav-link">HOME</a>
                 <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
                 <a href="services.html" class="nav-link active">SERVICES</a>
@@ -98,6 +99,9 @@
             <a href="login.html" class="auth-link">LOGIN</a>
             <a href="register.html" class="auth-link">REGISTER</a>
             <a href="dashboard.html" class="auth-link dashboard-link">DASHBOARD</a>
+            <button class="theme-switcher" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
@@ -152,7 +156,7 @@
                 <!-- Engineering with image -->
                 <div class="service-detail" data-aos="fade-up">
                     <div class="service-hero">
-                        <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2578&auto=format&fit=crop"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScB9AjhY55baxHKONEH8G1KiXwNieKKawhZQ&sOK"
                             alt="Engineering Services">
                         <div class="service-hero-overlay">
                             <h2 style="color: #fff;">Engineering Services</h2>
@@ -174,49 +178,40 @@
                 <!-- Our Process -->
                 <div class="service-detail" data-aos="fade-up" style="margin-top: 100px;">
                     <h2 class="text-center">OUR PROCESS</h2>
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 50px; text-align: center; gap: 20px;">
-                        <div style="flex: 1; min-width: 200px;">
-                            <div
-                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
-                                <span
-                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">01</span>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">
+                                <span>01</span>
                             </div>
-                            <h3 style="color: #fff;">CONSULT</h3>
-                            <p style="color: #777;">Requirements.</p>
+                            <h3>CONSULT</h3>
+                            <p>Requirements.</p>
                         </div>
-                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
+                        <div class="process-arrow"><i class="fas fa-arrow-right"></i>
                         </div>
-                        <div style="flex: 1; min-width: 200px;">
-                            <div
-                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
-                                <span
-                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">02</span>
+                        <div class="process-step">
+                            <div class="step-number">
+                                <span>02</span>
                             </div>
-                            <h3 style="color: #fff;">PROTOTYPE</h3>
-                            <p style="color: #777;">Vertical slice creation.</p>
+                            <h3>PROTOTYPE</h3>
+                            <p>Vertical slice creation.</p>
                         </div>
-                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
+                        <div class="process-arrow"><i class="fas fa-arrow-right"></i>
                         </div>
-                        <div style="flex: 1; min-width: 200px;">
-                            <div
-                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
-                                <span
-                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">03</span>
+                        <div class="process-step">
+                            <div class="step-number">
+                                <span>03</span>
                             </div>
-                            <h3 style="color: #fff;">PRODUCE</h3>
-                            <p style="color: #777;">Full-scale development.</p>
+                            <h3>PRODUCE</h3>
+                            <p>Full-scale development.</p>
                         </div>
-                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
+                        <div class="process-arrow"><i class="fas fa-arrow-right"></i>
                         </div>
-                        <div style="flex: 1; min-width: 200px;">
-                            <div
-                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
-                                <span
-                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">04</span>
+                        <div class="process-step">
+                            <div class="step-number">
+                                <span>04</span>
                             </div>
-                            <h3 style="color: #fff;">POLISH</h3>
-                            <p style="color: #777;">QA and optimization.</p>
+                            <h3>POLISH</h3>
+                            <p>QA and optimization.</p>
                         </div>
                     </div>
                 </div>
@@ -306,14 +301,11 @@
         </div>
     </footer>
 
-    <!-- Theme Switcher -->
-    <button class="theme-switcher" aria-label="Toggle theme">
-        <i class="fas fa-moon"></i>
-    </button>
+
 
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up"></i>OK
     </button>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

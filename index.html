@@ -25,7 +25,7 @@
         <div class="header-left">
             <a href="index.html" class="brand-logo">GAME DEV STUDIO</a>
             <button class="menu-btn"><span
-                    class="hamburger-icon"><span></span><span></span><span></span></span>MENU</button>
+                    class="hamburger-icon"><span></span><span></span><span></span></span></button>
         </div>
 
         <div class="header-center">
@@ -42,6 +42,9 @@
             <a href="login.html" class="auth-link">LOGIN</a>
             <a href="register.html" class="auth-link">REGISTER</a>
             <a href="dashboard.html" class="auth-link dashboard-link">DASHBOARD</a>
+            <button class="theme-switcher" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
@@ -158,43 +161,45 @@
             </div>
         </section>
 
-        
-            <!-- Alumni Section -->
-            <section class="section">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <h2 class="section-title condensed">ALOFMN IT</h2>
-                        <p class="section-subtitle">Success stories from our talented alumni network</p>
-                    </div>
-                    
-                    <div class="alumni-content" style="display: flex; align-items: center; gap: 40px; margin: 60px 0;">
-                        <div class="alumni-text" style="flex: 1;">
-                            <p>Meet our successful alumni who have gone on to work at leading game studios worldwide. Their achievements showcase the quality of training and mentorship we provide at Game Dev Studio.</p>
-                        </div>
-                        
-                        <div class="alumni-image">
-                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2671&auto=format&fit=crop"
-                                alt="Game Development Alumni"
-                                style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <div class="stats-bar">
-                <div class="stat">
-                    <span class="stat-num">3,800+</span>
-                    <span class="stat-desc">Talent</span>
+        <!-- Alumni Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title condensed">ALOFMN IT</h2>
+                    <p class="section-subtitle">Success stories from our talented alumni network</p>
                 </div>
-                <div class="stat">
-                    <span class="stat-num">23</span>
-                    <span class="stat-desc">Top 25 Clients</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-num">1,500+</span>
-                    <span class="stat-desc">Projects</span>
+
+                <div class="alumni-content" style="display: flex; align-items: center; gap: 40px; margin: 60px 0;">
+                    <div class="alumni-text" style="flex: 1;">
+                        <p>Meet our successful alumni who have gone on to work at leading game studios worldwide. Their
+                            achievements showcase the quality of training and mentorship we provide at Game Dev Studio.
+                        </p>
+                    </div>
+
+                    <div class="alumni-image">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2671&auto=format&fit=crop"
+                            alt="Game Development Alumni"
+                            style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-num">3,800+</span>
+                <span class="stat-desc">Talent</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">23</span>
+                <span class="stat-desc">Top 25 Clients</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">1,500+</span>
+                <span class="stat-desc">Projects</span>
+            </div>
+        </div>
         </section>
 
         <!-- Services (Screenshot 5) -->
@@ -334,11 +339,6 @@
             <p>&copy; 2026 Game Dev Studio. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" aria-label="Scroll to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
