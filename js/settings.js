@@ -10,7 +10,7 @@
     document.documentElement.setAttribute('dir', savedDir);
 
     // Settings UI functionality disabled to prevent overlapping issues
-    // Theme switching is now handled by the theme-switcher button in main.js
+    // Theme is loaded from storage/default; no global theme toggle button is rendered
     function createSettingsUI() {
         // Settings button and sidebar creation disabled
         return;

@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     // Mobile Menu Toggle
     const menuBtn = document.querySelector('.menu-btn');
-    // Note: In a real implementation I'd need a mobile menu container to toggle. 
-    // For now, I'll just log it or toggle a class on the body.
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
-            // Check if mobile nav exists, if not create it
+            // Create mobile nav once, then just toggle visibility
             let mobileNav = document.querySelector('.mobile-nav-overlay');
             if (!mobileNav) {
                 mobileNav = document.createElement('div');
@@ -22,20 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="login.html" style="color: var(--primary-orange);">LOGIN</a>
                         <a href="register.html" style="color: var(--primary-orange);">REGISTER</a>
                         <a href="dashboard.html" style="color: var(--primary-orange);">DASHBOARD</a>
-</nav>
+                    </nav>
                 `;
                 document.body.appendChild(mobileNav);
 
-                // Add close functionality
-                mobileNav.querySelector('.close-menu').addEventListener('click', () => {
-                    document.body.classList.remove('show-mobile-nav');
-                });
-            }
-);
+                const closeBtn = mobileNav.querySelector('.close-menu');
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', () => {
+                        document.body.classList.remove('show-mobile-nav');
+                    });
                 }
             }
 
-            // Toggle Visibility
             document.body.classList.toggle('show-mobile-nav');
         });
     }
@@ -43,17 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Services Tabs Logic
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
-
-    tabBtns.forEach(btn => {
+    tabBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
-            // Remove active class from all buttons and contents
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
-
-            // Add active class to clicked button
+            tabBtns.forEach((b) => b.classList.remove('active'));
+            tabContents.forEach((c) => c.classList.remove('active'));
             btn.classList.add('active');
 
-            // Find corresponding content and make active
             const tabId = btn.getAttribute('data-tab');
             const targetContent = document.getElementById(tabId);
             if (targetContent) {
@@ -64,15 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Sticky Header Scroll Effect
     const header = document.querySelector('.site-header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(15, 15, 15, 0.95)';
-            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
-        } else {
-            header.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.8), transparent)';
-            header.style.boxShadow = 'none';
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(15, 15, 15, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
+            } else {
+                header.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.8), transparent)';
+                header.style.boxShadow = 'none';
+            }
+        });
+    }
 
     // Scroll to Top Button
     const scrollToTopBtn = document.querySelector('.scroll-to-top');
@@ -93,13 +85,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-        // Set initial icon
-        const icon = themeSwitcher.querySelector('i');
-        if (icon) {
-            icon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-        }
-    }
-
-});
-
