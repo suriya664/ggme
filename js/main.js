@@ -22,10 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="login.html" style="color: var(--primary-orange);">LOGIN</a>
                         <a href="register.html" style="color: var(--primary-orange);">REGISTER</a>
                         <a href="dashboard.html" style="color: var(--primary-orange);">DASHBOARD</a>
-                        <button class="theme-switcher-mobile" aria-label="Toggle theme" style="background: none; border: 1px solid #fff; color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; gap: 10px; margin-top: 20px;">
-                            <i class="fas fa-moon"></i> <span>THEME</span>
-                        </button>
-                    </nav>
+</nav>
                 `;
                 document.body.appendChild(mobileNav);
 
@@ -33,36 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileNav.querySelector('.close-menu').addEventListener('click', () => {
                     document.body.classList.remove('show-mobile-nav');
                 });
-
-                // Add mobile theme switcher functionality
-                const mobileThemeBtn = mobileNav.querySelector('.theme-switcher-mobile');
-                if (mobileThemeBtn) {
-                    // Set initial icon based on current theme
-                    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-                    const icon = mobileThemeBtn.querySelector('i');
-                    if (icon) {
-                        icon.className = currentTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-                    }
-
-                    mobileThemeBtn.addEventListener('click', () => {
-                        const currentTheme = document.documentElement.getAttribute('data-theme');
-                        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-                        document.documentElement.setAttribute('data-theme', newTheme);
-                        localStorage.setItem('theme', newTheme);
-
-                        // Update mobile button icon
-                        const icon = mobileThemeBtn.querySelector('i');
-                        if (icon) {
-                            icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-                        }
-
-                        // Update desktop button icon if it exists
-                        const desktopBtn = document.querySelector('.theme-switcher i');
-                        if (desktopBtn) {
-                            desktopBtn.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-                        }
-                    });
+            }
+);
                 }
             }
 
@@ -123,27 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    // Theme Switcher
-    const themeSwitcher = document.querySelector('.theme-switcher');
-    if (themeSwitcher) {
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-
-        themeSwitcher.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-
-            // Update icon
-            const icon = themeSwitcher.querySelector('i');
-            if (icon) {
-                icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-            }
-        });
+});
 
         // Set initial icon
         const icon = themeSwitcher.querySelector('i');
@@ -153,3 +102,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
