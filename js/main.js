@@ -84,4 +84,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Dynamic Navigation Active State
+    const setActiveNav = () => {
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-content a');
+
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('href');
+            if (linkPath === currentPath) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    };
+
+    setActiveNav();
+
+    // Re-run for mobile menu since it's created dynamically
+    if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            setTimeout(setActiveNav, 10); // Short delay to ensure mobile menu is in DOM
+        });
+    }
 });

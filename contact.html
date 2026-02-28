@@ -14,63 +14,330 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/settings.css">
     <style>
-        .contact-container {
+        /* ── Contact Page Styles ── */
+
+        .contact-hero {
+            text-align: center;
+            padding: 120px 20px 60px;
+        }
+
+        .contact-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 15px;
+        }
+
+        .contact-hero p {
+            color: #999;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Department Cards — full-width row */
+        .dept-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .dept-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%);
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 35px 30px;
+            text-align: center;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dept-card:hover {
+            border-color: var(--primary-orange);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(255, 85, 0, 0.15);
+        }
+
+        .dept-card .dept-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(255, 85, 0, 0.1);
             display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.3rem;
+            color: var(--primary-orange);
+            transition: background 0.3s ease;
+        }
+
+        .dept-card:hover .dept-icon {
+            background: var(--primary-orange);
+            color: #fff;
+        }
+
+        .dept-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            color: #fff;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .dept-card .dept-email {
+            color: var(--primary-orange);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            word-break: break-all;
+        }
+
+        .dept-card .dept-phone {
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        /* Main Contact Grid — form + info */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 50px;
-            flex-wrap: wrap;
-            margin-top: 50px;
+            margin-bottom: 80px;
         }
 
-        .contact-form {
-            flex: 1;
-            min-width: 300px;
+        /* Form */
+        .contact-form-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%);
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 40px;
         }
 
-        .contact-info {
-            flex: 1;
-            min-width: 300px;
+        .contact-form-card h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
         .form-group {
             margin-bottom: 20px;
         }
 
+        .form-group label {
+            display: block;
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
         .form-control {
             width: 100%;
-            padding: 15px;
-            background: #222;
+            padding: 14px 16px;
+            background: #0d0d0d;
             border: 1px solid #333;
             color: #fff;
-            border-radius: 4px;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
         }
 
         .form-control:focus {
             border-color: var(--primary-orange);
             outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.15);
         }
 
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            padding: 16px;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #fff;
+            background: var(--primary-orange);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-submit-btn:hover {
+            background: #e64a00;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 85, 0, 0.4);
+        }
+
+        /* Info Panel */
+        .contact-info-card {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-block {
+            background: linear-gradient(135deg, #1a1a1a 0%, #141414 100%);
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .info-block h3 {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--primary-orange);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .info-block p {
+            color: #ccc;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Social icons */
         .contact-socials {
             display: flex;
-            gap: 15px;
-            margin-top: 30px;
+            gap: 12px;
+            justify-content: center;
             flex-wrap: wrap;
+            margin-top: 15px;
         }
 
         .contact-socials a {
-            width: 45px;
-            height: 45px;
-            background-color: #222;
+            width: 44px;
+            height: 44px;
+            background: #0d0d0d;
+            border: 1px solid #333;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
-            transition: 0.3s;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
         }
 
         .contact-socials a:hover {
-            background-color: var(--primary-orange);
+            background: var(--primary-orange);
+            border-color: var(--primary-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(255, 85, 0, 0.3);
+        }
+
+        /* Map — full width */
+        .map-section {
+            margin-bottom: 80px;
+        }
+
+        .map-section h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .map-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #222;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 400px;
+            display: block;
+            border: 0;
+        }
+
+        /* Partner CTA — full width card */
+        .partner-cta {
+            background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+            border: 1px solid #222;
+            border-radius: 16px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .partner-cta h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .partner-cta p {
+            color: #999;
+            max-width: 600px;
+            margin: 0 auto 35px;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .dept-cards {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dept-cards {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .dept-card {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                padding: 24px;
+                gap: 20px;
+            }
+
+            .dept-card .dept-icon {
+                margin: 0;
+                flex-shrink: 0;
+            }
+
+            .dept-card h3 {
+                margin-bottom: 4px;
+            }
+
+            .contact-form-card {
+                padding: 28px 22px;
+            }
+
+            .partner-cta {
+                padding: 40px 24px;
+            }
+
+            .map-wrapper iframe {
+                height: 280px;
+            }
         }
     </style>
 </head>
@@ -85,11 +352,11 @@
 
         <div class="header-center">
             <nav class="main-nav">
-                <a href="index.html" class="nav-link">HOME</a>
-                <a href="home-2.html" class="nav-link">HOME 2</a>
+                <a href="index.html" class="nav-link">GAME</a>
+                <a href="home-2.html" class="nav-link">HOME</a>
                 <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
                 <a href="services.html" class="nav-link">SERVICES</a>
-                <a href="contact.html" class="nav-link active">CONTACT</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
             </nav>
         </div>
 
@@ -97,89 +364,127 @@
             <a href="login.html" class="auth-link">LOGIN</a>
             <a href="register.html" class="auth-link">REGISTER</a>
             <a href="dashboard.html" class="auth-link dashboard-link">DASHBOARD</a>
-</div>
+        </div>
     </header>
 
-    <main style="padding-top: 100px;">
+    <main>
+        <!-- Hero -->
+        <section class="contact-hero" data-aos="fade-down">
+            <h1 class="section-title condensed">GET IN TOUCH</h1>
+            <p>Have a project in mind or want to join our team? We'd love to hear from you. Reach out through any
+                channel below.</p>
+        </section>
+
         <section class="section">
             <div class="container">
-                <h1 class="section-title condensed text-center" data-aos="fade-down">GET IN TOUCH</h1>
 
-                <div class="contact-container" data-aos="fade-up">
-                    <div class="contact-form">
+                <!-- Department Cards — 3×1 full-width row -->
+                <div class="dept-cards" data-aos="fade-up">
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="fas fa-briefcase"></i></div>
+                        <div>
+                            <h3>BUSINESS</h3>
+                            <p class="dept-email">biz@gamedevstudio.com</p>
+                            <p class="dept-phone">+65 6123 4567</p>
+                        </div>
+                    </div>
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="fas fa-newspaper"></i></div>
+                        <div>
+                            <h3>MEDIA</h3>
+                            <p class="dept-email">press@gamedevstudio.com</p>
+                            <p class="dept-phone">+33 1 23 45 67 89</p>
+                        </div>
+                    </div>
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="fas fa-user-tie"></i></div>
+                        <div>
+                            <h3>CAREERS</h3>
+                            <p class="dept-email">jobs@gamedevstudio.com</p>
+                            <p class="dept-phone">Check our portal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Grid: Form + Info -->
+                <div class="contact-grid">
+                    <!-- Form Card -->
+                    <div class="contact-form-card" data-aos="fade-right">
+                        <h2>SEND US A MESSAGE</h2>
                         <form>
-                            <div class="form-group"><input type="text" class="form-control" placeholder="Name"></div>
-                            <div class="form-group"><input type="email" class="form-control" placeholder="Email"></div>
-                            <div class="form-group"><select class="form-control">
+                            <div class="form-group">
+                                <label for="contact-name">Your Name</label>
+                                <input type="text" id="contact-name" class="form-control" placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" class="form-control"
+                                    placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <select id="contact-subject" class="form-control">
                                     <option>General Inquiry</option>
+                                    <option>Business Partnership</option>
                                     <option>Careers</option>
-                                    <option>Business</option>
-                                </select></div>
-                            <div class="form-group"><textarea class="form-control" rows="5"
-                                    placeholder="Message"></textarea></div>
-                            <button type="submit" class="btn btn-outline-orange">SEND MESSAGE</button>
+                                    <option>Media & Press</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" class="form-control"
+                                    placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="form-submit-btn">SEND MESSAGE</button>
                         </form>
                     </div>
 
-                    <div class="contact-info">
-                        <h3>Headquarters</h3>
-                        <p>123 Game Dev Lane<br>Singapore, 000000</p>
-                        <br>
-                        <h3>Email</h3>
-                        <p>hello@gamedevstudio.com</p>
-
-                        <!-- Social Icons -->
-                        <h3 style="margin-top: 30px;">Follow Us</h3>
-                        <div class="contact-socials">
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <!-- Info Panel -->
+                    <div class="contact-info-card" data-aos="fade-left">
+                        <div class="info-block">
+                            <h3>HEADQUARTERS</h3>
+                            <p>123 Game Dev Lane<br>Singapore, 000000</p>
                         </div>
 
-                        <!-- Google Maps Embed -->
-                        <div style="margin-top: 30px; border-radius: 8px; overflow: hidden;">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.13608560986!2d103.8493843!3d1.2899175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a0f2cbfc97%3A0x15b3d5c99b942f0!2sSingapore!5e0!3m2!1sen!2s!4v1&output=embed"
-                                width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen=""
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="info-block">
+                            <h3>EMAIL US</h3>
+                            <p>hello@gamedevstudio.com</p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>FOLLOW US</h3>
+                            <div class="contact-socials">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Global Support -->
-            <div class="container"
-                style="margin-top: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;"
-                data-aos="fade-up">
-                <div style="background: #1a1a1a; padding: 25px; border-radius: 8px; text-align: center;">
-                    <h3 style="color: #fff; font-family: var(--font-heading);">BUSINESS</h3>
-                    <p style="color: var(--primary-orange);">biz@gamedevstudio.com</p>
-                    <p style="color: #777; font-size: 0.9rem;">+65 6123 4567</p>
+                <!-- Map — full width -->
+                <div class="map-section" data-aos="fade-up">
+                    <h2 class="condensed">FIND US</h2>
+                    <div class="map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.13608560986!2d103.8493843!3d1.2899175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a0f2cbfc97%3A0x15b3d5c99b942f0!2sSingapore!5e0!3m2!1sen!2s!4v1&output=embed"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
-                <div style="background: #1a1a1a; padding: 25px; border-radius: 8px; text-align: center;">
-                    <h3 style="color: #fff; font-family: var(--font-heading);">MEDIA</h3>
-                    <p style="color: var(--primary-orange);">press@gamedevstudio.com</p>
-                    <p style="color: #777; font-size: 0.9rem;">+33 1 23 45 67 89</p>
-                </div>
-                <div style="background: #1a1a1a; padding: 25px; border-radius: 8px; text-align: center;">
-                    <h3 style="color: #fff; font-family: var(--font-heading);">CAREERS</h3>
-                    <p style="color: var(--primary-orange);">jobs@gamedevstudio.com</p>
-                    <p style="color: #777; font-size: 0.9rem;">Check our portal</p>
-                </div>
-            </div>
 
-            <!-- Partner CTA -->
-            <section class="container"
-                style="margin-top: 80px; text-align: center; border-top: 1px solid #222; padding-top: 40px;"
-                data-aos="fade-up">
-                <h2 class="condensed" style="color: #fff;">LOOKING FOR A CO-DEV PARTNER?</h2>
-                <p style="color: #999; max-width: 600px; margin: 10px auto 30px;">We have the scale and expertise to
-                    bring your vision to life. Let's discuss your project requirements.</p>
-                <a href="#" class="btn btn-primary">REQUEST A PROPOSAL</a>
-            </section>
+                <!-- Partner CTA — full width card -->
+                <div class="partner-cta" data-aos="fade-up">
+                    <h2 class="condensed">LOOKING FOR A CO-DEV PARTNER?</h2>
+                    <p>We have the scale and expertise to bring your vision to life. Let's discuss your project
+                        requirements.</p>
+                    <a href="#" class="btn btn-outline-orange">REQUEST A PROPOSAL</a>
+                </div>
+
+            </div>
         </section>
     </main>
 
@@ -233,15 +538,13 @@
         </div>
     </footer>
 
-
-
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>AOS.init({ duration: 800, once: true });</script>
     <script src="js/main.js"></script>
 </body>
 

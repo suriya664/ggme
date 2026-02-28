@@ -442,7 +442,7 @@ section {
     color: var(--text-primary);
     font-family: var(--font-heading);
     font-size: 1.2rem;
-    display: flex;
+    display: none;
     align-items: center;
     gap: 10px;
     cursor: pointer;
@@ -634,12 +634,24 @@ section {
 
 .stories-carousel {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--card-gap);
     padding: 0;
     max-width: var(--container-width);
     margin: 0 auto;
     box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+    .stories-carousel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .stories-carousel {
+        grid-template-columns: 1fr;
+    }
 }
 
 .story-card {
@@ -846,6 +858,46 @@ section {
     }
 }
 
+/* Alumni Section */
+.alumni-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.alumni-text {
+    flex: 1;
+}
+
+.alumni-text p {
+    text-align: left;
+}
+
+.alumni-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .alumni-content {
+        flex-direction: column;
+        gap: 25px;
+        margin: 30px 0;
+    }
+
+    .alumni-text p {
+        text-align: center;
+    }
+
+    .alumni-img {
+        max-width: 100%;
+    }
+}
+
 /* Services Tabs */
 .services-tabs-section {
     background-color: var(--bg-secondary);
@@ -965,6 +1017,18 @@ section {
     gap: 20px;
     justify-content: center;
     align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .content-visuals {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .visual-card {
+        width: 100%;
+        max-width: 400px;
+    }
 }
 
 .visual-card {
@@ -1248,7 +1312,7 @@ section {
     }
 
     .stories-carousel {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 0 var(--padding-tablet);
     }
@@ -1289,7 +1353,7 @@ section {
     }
 
     .stories-carousel {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: var(--card-gap);
         padding: 0;
         max-width: var(--container-width);
@@ -1545,7 +1609,6 @@ body.show-mobile-nav .mobile-nav-overlay {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    position: relative;
 }
 
 .mobile-nav-content a {
@@ -1563,34 +1626,26 @@ body.show-mobile-nav .mobile-nav-overlay {
 }
 
 .close-menu {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     background: none;
     border: none;
     color: #fff;
-    font-size: 3rem;
+    font-size: 2.5rem;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 10000;
+    line-height: 1;
+    padding: 5px 10px;
 }
 
 .close-menu:hover {
     color: var(--primary-orange);
+    transform: rotate(90deg);
 }
 
-/* Menu Button Styles */
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-family: var(--font-heading);
-    font-size: 0.9rem;
-    cursor: pointer;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease;
-}
+/* Menu Button Styles - base rule at top, responsive overrides below */
 
 .menu-btn:hover {
     color: var(--primary-orange);

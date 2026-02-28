@@ -34,8 +34,14 @@
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .feature-item {
@@ -87,10 +93,10 @@
 
         <div class="header-center">
             <nav class="main-nav">
-                <a href="index.html" class="nav-link active">GAME</a>
+                <a href="index.html" class="nav-link">GAME</a>
                 <a href="home-2.html" class="nav-link">HOME</a>
                 <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
-                <a href="services.html" class="nav-link active">SERVICES</a>
+                <a href="services.html" class="nav-link">SERVICES</a>
                 <a href="contact.html" class="nav-link">CONTACT</a>
             </nav>
         </div>
@@ -99,7 +105,7 @@
             <a href="login.html" class="auth-link">LOGIN</a>
             <a href="register.html" class="auth-link">REGISTER</a>
             <a href="dashboard.html" class="auth-link dashboard-link">DASHBOARD</a>
-</div>
+        </div>
     </header>
 
     <main style="padding-top: 100px;">
@@ -217,30 +223,36 @@
                 <div class="service-detail" data-aos="fade-up" style="margin-top: 100px;">
                     <h2 class="text-center">TECHNOLOGY STACK</h2>
                     <div
-                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 30px; margin-top: 40px; text-align: center;">
-                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
-                                class="fas fa-layer-group fa-3x" style="color: #fff;"></i>
-                            <p style="margin-top: 10px; color: #ccc;">Unreal 5</p>
+                        style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; text-align: center;">
+                        <div
+                            style="background: #1a1a1a; padding: 20px; border-radius: 12px; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #2a2a2a; transition: all 0.3s ease;">
+                            <i class="fas fa-layer-group fa-3x" style="color: #fff; margin-bottom: 15px;"></i>
+                            <p style="margin: 0; color: #ccc; font-size: 0.95rem;">Unreal 5</p>
                         </div>
-                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
-                                class="fas fa-cube fa-3x" style="color: #fff;"></i>
-                            <p style="margin-top: 10px; color: #ccc;">Unity</p>
+                        <div
+                            style="background: #1a1a1a; padding: 20px; border-radius: 12px; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #2a2a2a; transition: all 0.3s ease;">
+                            <i class="fas fa-cube fa-3x" style="color: #fff; margin-bottom: 15px;"></i>
+                            <p style="margin: 0; color: #ccc; font-size: 0.95rem;">Unity</p>
                         </div>
-                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
-                                class="fas fa-code fa-3x" style="color: #fff;"></i>
-                            <p style="margin-top: 10px; color: #ccc;">C++</p>
+                        <div
+                            style="background: #1a1a1a; padding: 20px; border-radius: 12px; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #2a2a2a; transition: all 0.3s ease;">
+                            <i class="fas fa-code fa-3x" style="color: #fff; margin-bottom: 15px;"></i>
+                            <p style="margin: 0; color: #ccc; font-size: 0.95rem;">C++</p>
                         </div>
-                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
-                                class="fas fa-pencil-ruler fa-3x" style="color: #fff;"></i>
-                            <p style="margin-top: 10px; color: #ccc;">Maya</p>
+                        <div
+                            style="background: #1a1a1a; padding: 20px; border-radius: 12px; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #2a2a2a; transition: all 0.3s ease;">
+                            <i class="fas fa-pencil-ruler fa-3x" style="color: #fff; margin-bottom: 15px;"></i>
+                            <p style="margin: 0; color: #ccc; font-size: 0.95rem;">Maya</p>
                         </div>
-                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
-                                class="fas fa-paint-brush fa-3x" style="color: #fff;"></i>
-                            <p style="margin-top: 10px; color: #ccc;">Photoshop</p>
+                        <div
+                            style="background: #1a1a1a; padding: 20px; border-radius: 12px; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #2a2a2a; transition: all 0.3s ease;">
+                            <i class="fas fa-paint-brush fa-3x" style="color: #fff; margin-bottom: 15px;"></i>
+                            <p style="margin: 0; color: #ccc; font-size: 0.95rem;">Photoshop</p>
                         </div>
-                        <div style="background: #1a1a1a; padding: 20px; border-radius: 8px;"><i
-                                class="fas fa-server fa-3x" style="color: #fff;"></i>
-                            <p style="margin-top: 10px; color: #ccc;">AWS</p>
+                        <div
+                            style="background: #1a1a1a; padding: 20px; border-radius: 12px; width: 140px; height: 140px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #2a2a2a; transition: all 0.3s ease;">
+                            <i class="fas fa-server fa-3x" style="color: #fff; margin-bottom: 15px;"></i>
+                            <p style="margin: 0; color: #ccc; font-size: 0.95rem;">AWS</p>
                         </div>
                     </div>
                 </div>

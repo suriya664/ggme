@@ -13,6 +13,264 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/settings.css">
+    <style>
+        /* ── Home 2 Page Styles ── */
+
+        /* Why Choose Us */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .why-card i {
+            color: var(--primary-orange);
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            color: #fff;
+            font-family: var(--font-heading);
+            margin-bottom: 12px;
+        }
+
+        .why-card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Showreel */
+        .showreel-section {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://images.unsplash.com/photo-1535016120720-40c6874c3b1c?q=80&w=2664&auto=format&fit=crop') center/cover fixed;
+        }
+
+        .showreel-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            inset: 0;
+        }
+
+        .showreel-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .showreel-content h2 {
+            color: #fff;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+        }
+
+        .play-btn {
+            background: var(--primary-orange);
+            border: none;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(255, 85, 0, 0.5);
+        }
+
+        .play-btn i {
+            margin-left: 5px;
+        }
+
+        /* Testimonials */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            background: #1a1a1a;
+            padding: 35px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-orange);
+        }
+
+        .testimonial-card p.quote {
+            color: #ccc;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-author h4 {
+            color: #fff;
+            margin: 0;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .testimonial-author span {
+            color: var(--primary-orange);
+            font-size: 0.8rem;
+        }
+
+        /* Alumni */
+        .h2-alumni-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .h2-alumni-item {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .h2-alumni-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .h2-alumni-text {
+            flex: 1;
+        }
+
+        .h2-alumni-text h3 {
+            color: var(--primary-orange);
+            font-family: var(--font-heading);
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        .h2-alumni-text h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .h2-alumni-text p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .alumni-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .alumni-tag {
+            background: var(--primary-orange);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .h2-alumni-image {
+            flex: 0 0 400px;
+        }
+
+        .h2-alumni-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 992px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .h2-alumni-item,
+            .h2-alumni-item.reverse {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .h2-alumni-image {
+                flex: none;
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .h2-alumni-text h3,
+            .h2-alumni-text h4,
+            .h2-alumni-text p {
+                text-align: center;
+            }
+
+            .alumni-tags {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .showreel-section {
+                height: 350px;
+                background-attachment: scroll;
+            }
+
+            .showreel-content h2 {
+                font-size: 2rem;
+            }
+
+            .play-btn {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .testimonial-card {
+                padding: 25px;
+            }
+
+            .h2-alumni-image img {
+                height: 220px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -27,7 +285,7 @@
 
         <div class="header-center">
             <nav class="main-nav">
-                <a href="index.html" class="nav-link active">GAME</a>
+                <a href="index.html" class="nav-link">GAME</a>
                 <a href="home-2.html" class="nav-link">HOME</a>
                 <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
                 <a href="services.html" class="nav-link">SERVICES</a>
@@ -39,11 +297,11 @@
             <a href="login.html" class="auth-link">LOGIN</a>
             <a href="register.html" class="auth-link">REGISTER</a>
             <a href="dashboard.html" class="auth-link dashboard-link">DASHBOARD</a>
-</div>
+        </div>
     </header>
 
     <main>
-        <!-- Home 2 Hero: Center Focus -->
+        <!-- Hero -->
         <section class="hero"
             style="background: url('https://images.unsplash.com/photo-1558655146-d09347e0b7a8?q=80&w=2670&auto=format&fit=crop') center/cover;">
             <div class="hero-bg">
@@ -56,29 +314,28 @@
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- About -->
         <section class="section" style="background: #0d0d0d;">
             <div class="container">
                 <div class="text-center" style="max-width: 800px; margin: 0 auto;">
-                    <h2 class="section-title condensed" style="color: #fff; margin-bottom: 30px;">BUILDING
-                        WORLDS<br>THAT INSPIRE</h2>
-                    <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8;">
+                    <h2 class="section-title condensed" data-aos="fade-up">BUILDING WORLDS<br>THAT INSPIRE</h2>
+                    <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8;" data-aos="fade-up"
+                        data-aos-delay="200">
                         Founded in 2004, Virtuos is one of the largest independent video game development companies. We
                         are headquartered in Singapore with offices in Asia, Europe, and North America. Specializing in
                         full-cycle game development and art production, we have delivered high-quality content for more
-                        than 1,500 console, PC, and mobile games. Our clients include 23 of the top 25 gaming companies
-                        worldwide.
+                        than 1,500 console, PC, and mobile games.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Success Stories Grid (Different from Carousel) -->
+        <!-- Recent Releases -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title condensed text-center" style="margin-bottom: 60px;">RECENT RELEASES</h2>
+                <h2 class="section-title condensed text-center" style="margin-bottom: 60px;" data-aos="fade-down">
+                    RECENT RELEASES</h2>
                 <div class="stories-carousel">
-
                     <div class="story-card"
                         style="background-image: url('https://m.media-amazon.com/images/M/MV5BOGIxMDQ0NjUtNGI2Ny00NjU0LWE1YmMtYWEyMThhNTgyZWYxXkEyXkFqcGc@._V1_.jpg');">
                         <div class="card-content">
@@ -98,46 +355,13 @@
                     <div class="story-card"
                         style="background-image: url('https://media.istockphoto.com/id/1191198570/photo/spaceship-flying-near-an-alien-planetary-system-in-the-background-a-supernova-explosion-3d.jpg?s=612x612&w=0&k=20&c=y5YJH442cPLC3KMh-8LqM_0zSGwmf2-os6VlS4GLnY0=');">
                         <div class="card-content">
-                            <h3 style="color: #fff;">CONSULT</h3>
-                            <p style="color: #777;">01</p>
-                        </div>
-                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
-                        </div>
-                        <div style="flex: 1; min-width: 200px;">
-                            <div
-                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
-                                <span
-                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">02</span>
-                            </div>
-                            <h3 style="color: #fff;">PROTOTYPE</h3>
-                            <p style="color: #777;">Vertical slice creation.</p>
-                        </div>
-                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
-                        </div>
-                        <div style="flex: 1; min-width: 200px;">
-                            <div
-                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
-                                <span
-                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">03</span>
-                            </div>
-                            <h3 style="color: #fff;">PRODUCE</h3>
-                            <p style="color: #777;">Full-scale development.</p>
-                        </div>
-                        <div style="font-size: 2rem; color: #333;" class="arrow-icon"><i class="fas fa-arrow-right"></i>
-                        </div>
-                        <div style="flex: 1; min-width: 200px;">
-                            <div
-                                style="width: 80px; height: 80px; background: #222; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--primary-orange);">
-                                <span
-                                    style="font-size: 1.5rem; color: #fff; font-family: var(--font-heading);">04</span>
-                            </div>
-                            <h3 style="color: #fff;">POLISH</h3>
-                            <p style="color: #777;">QA and optimization.</p>
+                            <h3>Star Voyager</h3>
+                            <p class="studio-name">Stellar Games</p>
                         </div>
                     </div>
 
                     <div class="story-card"
-                        style="background-image: url(' https://www.turtlewings.co.in/cdn/shop/files/StarCraft-Remastered-_-Galactic-War-Reborn-copyPortrait-02.jpg?crop=center&height=800&v=1760522721&width=800');">
+                        style="background-image: url('https://www.turtlewings.co.in/cdn/shop/files/StarCraft-Remastered-_-Galactic-War-Reborn-copyPortrait-02.jpg?crop=center&height=800&v=1760522721&width=800');">
                         <div class="card-content">
                             <h3>Galactic Wars</h3>
                             <p class="studio-name">EA</p>
@@ -159,196 +383,149 @@
                             <p class="studio-name">Stellar Games</p>
                         </div>
                     </div>
-                </div> <!-- Why Choose Us -->
-                <section class="section" style="background: #0d0d0d;">
-                    <div class="container">
-                        <div class="text-center" style="margin-bottom: 60px;">
-                            <h2 class="section-title condensed">WHY PARTNER WITH US?</h2>
-                        </div>
-                        <div class="row" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-                            <div class="col-md-4 text-center" style="flex: 1; min-width: 300px;">
-                                <i class="fas fa-rocket fa-3x"
-                                    style="color: var(--primary-orange); margin-bottom: 20px;"></i>
-                                <h3 style="color: #fff; font-family: var(--font-heading);">SPEED TO MARKET</h3>
-                                <p style="color: #ccc;">Our agile workflows allow for rapid prototyping and
-                                    efficient production cycles.</p>
-                            </div>
-                            <div class="col-md-4 text-center" style="flex: 1; min-width: 300px;">
-                                <i class="fas fa-shield-alt fa-3x"
-                                    style="color: var(--primary-orange); margin-bottom: 20px;"></i>
-                                <h3 style="color: #fff; font-family: var(--font-heading);">IP SECURITY</h3>
-                                <p style="color: #ccc;">Bank-grade security protocols to ensure your intellectual
-                                    property remains safe.</p>
-                            </div>
-                            <div class="col-md-4 text-center" style="flex: 1; min-width: 300px;">
-                                <i class="fas fa-globe fa-3x"
-                                    style="color: var(--primary-orange); margin-bottom: 20px;"></i>
-                                <h3 style="color: #fff; font-family: var(--font-heading);">GLOBAL TALENT</h3>
-                                <p style="color: #ccc;">Access to a diverse pool of artists and engineers from 15
-                                    different countries.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
+            </div>
+        </section>
 
-                <!-- Video Showreel -->
-                <section class="section showreel-section"
-                    style="position: relative; height: 500px; display: flex; align-items: center; justify-content: center; background: url('https://images.unsplash.com/photo-1535016120720-40c6874c3b1c?q=80&w=2664&auto=format&fit=crop') center/cover fixed;">
-                    <div class="overlay" style="background: rgba(0,0,0,0.6); position: absolute; inset: 0;"></div>
-                    <div style="position: relative; z-index: 2; text-align: center;">
-                        <h2 class="condensed" style="color: #fff; font-size: 4rem; margin-bottom: 20px;">2026
-                            SHOWREEL</h2>
-                        <button
-                            style="background: var(--primary-orange); border: none; width: 80px; height: 80px; border-radius: 50%; color: #fff; font-size: 2rem; cursor: pointer; transition: 0.3s;"><i
-                                class="fas fa-play" style="margin-left: 5px;"></i></button>
+        <!-- Why Choose Us -->
+        <section class="section" style="background: #0d0d0d;">
+            <div class="container">
+                <h2 class="section-title condensed text-center" style="margin-bottom: 60px;" data-aos="fade-down">WHY
+                    PARTNER WITH US?</h2>
+                <div class="why-grid" data-aos="fade-up">
+                    <div class="why-card">
+                        <i class="fas fa-rocket fa-3x"></i>
+                        <h3>SPEED TO MARKET</h3>
+                        <p>Our agile workflows allow for rapid prototyping and efficient production cycles.</p>
                     </div>
-                </section>
+                    <div class="why-card">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                        <h3>IP SECURITY</h3>
+                        <p>Bank-grade security protocols to ensure your intellectual property remains safe.</p>
+                    </div>
+                    <div class="why-card">
+                        <i class="fas fa-globe fa-3x"></i>
+                        <h3>GLOBAL TALENT</h3>
+                        <p>Access to a diverse pool of artists and engineers from 15 different countries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <!-- Testimonials -->
-                <section class="section">
-                    <div class="container">
-                        <h2 class="section-title condensed text-center" style="margin-bottom: 60px;">CLIENT WORDS
-                        </h2>
-                        <div class="testimonial-grid"
-                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                            <div class="testimonial-card"
-                                style="background: #1a1a1a; padding: 40px; border-radius: 8px; border-left: 4px solid var(--primary-orange);">
-                                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">"Game Dev Studio
-                                    delivered high-quality assets ahead of schedule. Their attention to detail on
-                                    the environment art was exceptional."</p>
-                                <div style="display: flex; align-items: center; gap: 15px;">
-                                    <img src="https://i.ytimg.com/vi/i04fYvrmMM8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAngH-fWqleT6aCUAzXdFOb9r-eiQ"
-                                        style="width: 50px; height: 50px; border-radius: 50%;">
-                                    <div>
-                                        <h4 style="color: #fff; margin: 0;">John Smith</h4>
-                                        <span style="color: var(--primary-orange); font-size: 0.8rem;">Producer,
-                                            Ubisoft</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-card"
-                                style="background: #1a1a1a; padding: 40px; border-radius: 8px; border-left: 4px solid var(--primary-orange);">
-                                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">"A reliable partner
-                                    for co-development. Their engineering team integrated seamlessly with our
-                                    internal pipeline."</p>
-                                <div style="display: flex; align-items: center; gap: 15px;">
-                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2574&auto=format&fit=crop"
-                                        style="width: 50px; height: 50px; border-radius: 50%;">
-                                    <div>
-                                        <h4 style="color: #fff; margin: 0;">Sarah Connor</h4>
-                                        <span style="color: var(--primary-orange); font-size: 0.8rem;">Tech Lead,
-                                            EA</span>
-                                    </div>
-                                </div>
+        <!-- Video Showreel -->
+        <section class="showreel-section">
+            <div class="showreel-overlay"></div>
+            <div class="showreel-content" data-aos="zoom-in">
+                <h2 class="condensed">2026 SHOWREEL</h2>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title condensed text-center" style="margin-bottom: 60px;" data-aos="fade-down">
+                    CLIENT WORDS</h2>
+                <div class="testimonial-grid" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <p class="quote">"Game Dev Studio delivered high-quality assets ahead of schedule. Their
+                            attention to detail on the environment art was exceptional."</p>
+                        <div class="testimonial-author">
+                            <img src="https://i.ytimg.com/vi/i04fYvrmMM8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAngH-fWqleT6aCUAzXdFOb9r-eiQ"
+                                alt="John Smith">
+                            <div>
+                                <h4>John Smith</h4>
+                                <span>Producer, Ubisoft</span>
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <!-- Game Development Alumni -->
-                <section class="section" style="background: #0d0d0d;">
-                    <div class="container">
-                        <h2 class="section-title condensed text-center" style="margin-bottom: 60px;">GAME DEVELOPMENT
-                            ALUMNI</h2>
-                        <p class="text-center"
-                            style="color: #ccc; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                            Success stories from our talented alumni network. Meet our successful alumni who have gone
-                            on to work at leading game studios worldwide. Their achievements showcase the quality of
-                            training and mentorship we provide at Game Dev Studio.
-                        </p>
-
-                        <div class="alumni-grid" style="display: flex; flex-direction: column; gap: 60px;">
-                            <!-- Alumni 1 -->
-                            <div class="alumni-item" data-aos="fade-right"
-                                style="display: flex; align-items: center; gap: 50px;">
-                                <div class="alumni-text" style="flex: 1; padding-right: 30px;">
-                                    <h3
-                                        style="color: var(--primary-orange); font-family: var(--font-heading); margin-bottom: 15px;">
-                                        ALEX CHEN</h3>
-                                    <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 20px;">Senior Game
-                                        Designer • Naughty Dog</h4>
-                                    <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
-                                        "The mentorship and hands-on experience at Game Dev Studio transformed my
-                                        passion into a profession. Working on real projects prepared me for the
-                                        fast-paced environment at AAA studios."
-                                    </p>
-                                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                                        <span
-                                            style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">The
-                                            Last of Us Part II</span>
-                                        <span
-                                            style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">Uncharted
-                                            4</span>
-                                    </div>
-                                </div>
-                                <div class="alumni-image" style="flex: 0 0 400px;">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=300&auto=format&fit=crop"
-                                        alt="Alex Chen"
-                                        style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                                </div>
-                            </div>
-
-                            <!-- Alumni 2 -->
-                            <div class="alumni-item" data-aos="fade-left"
-                                style="display: flex; align-items: center; gap: 50px; flex-direction: row-reverse;">
-                                <div class="alumni-text" style="flex: 1; padding-left: 30px;">
-                                    <h3
-                                        style="color: var(--primary-orange); font-family: var(--font-heading); margin-bottom: 15px;">
-                                        MARIA GARCIA</h3>
-                                    <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 20px;">Lead Technical
-                                        Artist • Riot Games</h4>
-                                    <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
-                                        "The technical art program gave me the perfect blend of artistic vision and
-                                        technical skills. I now lead the visual effects team for League of Legends
-                                        champions."
-                                    </p>
-                                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                                        <span
-                                            style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">League
-                                            of Legends</span>
-                                        <span
-                                            style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">Valorant</span>
-                                    </div>
-                                </div>
-                                <div class="alumni-image" style="flex: 0 0 400px;">
-                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=300&auto=format&fit=crop"
-                                        alt="Maria Garcia"
-                                        style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                                </div>
-                            </div>
-
-                            <!-- Alumni 3 -->
-                            <div class="alumni-item" data-aos="fade-right"
-                                style="display: flex; align-items: center; gap: 50px;">
-                                <div class="alumni-text" style="flex: 1; padding-right: 30px;">
-                                    <h3
-                                        style="color: var(--primary-orange); font-family: var(--font-heading); margin-bottom: 15px;">
-                                        JAMES WILSON</h3>
-                                    <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 20px;">Senior Engine
-                                        Programmer • Epic Games</h4>
-                                    <p style="color: #ccc; line-height: 1.6; margin-bottom: 20px;">
-                                        "From learning C++ fundamentals to contributing to Unreal Engine 5, Game Dev
-                                        Studio provided the foundation I needed to work on cutting-edge game
-                                        technology."
-                                    </p>
-                                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                                        <span
-                                            style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">Unreal
-                                            Engine 5</span>
-                                        <span
-                                            style="background: var(--primary-orange); color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">Fortnite</span>
-                                    </div>
-                                </div>
-                                <div class="alumni-image" style="flex: 0 0 400px;">
-                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&h=300&auto=format&fit=crop"
-                                        alt="James Wilson"
-                                        style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                                </div>
+                    <div class="testimonial-card">
+                        <p class="quote">"A reliable partner for co-development. Their engineering team integrated
+                            seamlessly with our internal pipeline."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2574&auto=format&fit=crop"
+                                alt="Sarah Connor">
+                            <div>
+                                <h4>Sarah Connor</h4>
+                                <span>Tech Lead, EA</span>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </div>
+        </section>
 
+        <!-- Game Development Alumni -->
+        <section class="section" style="background: #0d0d0d;">
+            <div class="container">
+                <h2 class="section-title condensed text-center" style="margin-bottom: 30px;" data-aos="fade-down">GAME
+                    DEVELOPMENT ALUMNI</h2>
+                <p class="text-center"
+                    style="color: #ccc; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Success stories from our talented alumni network. Meet our successful alumni who have gone
+                    on to work at leading game studios worldwide.
+                </p>
+
+                <div class="h2-alumni-grid">
+                    <!-- Alumni 1 -->
+                    <div class="h2-alumni-item" data-aos="fade-up">
+                        <div class="h2-alumni-text">
+                            <h3>ALEX CHEN</h3>
+                            <h4>Senior Game Designer • Naughty Dog</h4>
+                            <p>"The mentorship and hands-on experience at Game Dev Studio transformed my
+                                passion into a profession. Working on real projects prepared me for the
+                                fast-paced environment at AAA studios."</p>
+                            <div class="alumni-tags">
+                                <span class="alumni-tag">The Last of Us Part II</span>
+                                <span class="alumni-tag">Uncharted 4</span>
+                            </div>
+                        </div>
+                        <div class="h2-alumni-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=300&auto=format&fit=crop"
+                                alt="Alex Chen">
+                        </div>
+                    </div>
+
+                    <!-- Alumni 2 -->
+                    <div class="h2-alumni-item reverse" data-aos="fade-up">
+                        <div class="h2-alumni-text">
+                            <h3>MARIA GARCIA</h3>
+                            <h4>Lead Technical Artist • Riot Games</h4>
+                            <p>"The technical art program gave me the perfect blend of artistic vision and
+                                technical skills. I now lead the visual effects team for League of Legends
+                                champions."</p>
+                            <div class="alumni-tags">
+                                <span class="alumni-tag">League of Legends</span>
+                                <span class="alumni-tag">Valorant</span>
+                            </div>
+                        </div>
+                        <div class="h2-alumni-image">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=300&auto=format&fit=crop"
+                                alt="Maria Garcia">
+                        </div>
+                    </div>
+
+                    <!-- Alumni 3 -->
+                    <div class="h2-alumni-item" data-aos="fade-up">
+                        <div class="h2-alumni-text">
+                            <h3>JAMES WILSON</h3>
+                            <h4>Senior Engine Programmer • Epic Games</h4>
+                            <p>"From learning C++ fundamentals to contributing to Unreal Engine 5, Game Dev
+                                Studio provided the foundation I needed to work on cutting-edge game
+                                technology."</p>
+                            <div class="alumni-tags">
+                                <span class="alumni-tag">Unreal Engine 5</span>
+                                <span class="alumni-tag">Fortnite</span>
+                            </div>
+                        </div>
+                        <div class="h2-alumni-image">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&h=300&auto=format&fit=crop"
+                                alt="James Wilson">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -371,7 +548,6 @@
                 </div>
                 <a href="contact.html" class="btn btn-outline-orange">CONTACT US</a>
             </div>
-
             <div class="footer-links-col">
                 <h4>SERVICES</h4>
                 <ul>
@@ -380,7 +556,6 @@
                     <li><a href="services.html#art">ART PRODUCTION</a></li>
                 </ul>
             </div>
-
             <div class="footer-links-col">
                 <h4>QUICK LINKS</h4>
                 <ul>
@@ -389,7 +564,6 @@
                     <li><a href="press-kit.html">MEDIA KIT</a></li>
                 </ul>
             </div>
-
             <div class="footer-links-col">
                 <h4>SUPPORT</h4>
                 <ul>
@@ -404,15 +578,13 @@
         </div>
     </footer>
 
-
-
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>AOS.init({ duration: 800, once: true });</script>
     <script src="js/main.js"></script>
     <script src="js/settings.js"></script>
 </body>
