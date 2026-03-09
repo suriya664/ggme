@@ -28,15 +28,39 @@
             transition: transform 0.3s ease;
         }
 
-        .sidebar-logo {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.5rem;
-            color: var(--primary-orange);
-            margin-bottom: 40px;
-            text-decoration: none;
-            display: block;
-            letter-spacing: 2px;
+        .sidebar-logo-styled {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
             font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            display: block;
+            transition: all 0.3s ease;
+            position: relative;
+            width: fit-content;
+        }
+
+        .sidebar-logo-styled:hover {
+            color: var(--primary-orange);
+            transform: translateY(-2px);
+        }
+
+        .sidebar-logo-styled::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-orange);
+            transition: width 0.3s ease;
+        }
+
+        .sidebar-logo-styled:hover::after {
+            width: 100%;
         }
 
         .sidebar-close {
@@ -358,16 +382,33 @@
                 border-bottom: 1px solid #333;
             }
 
-            .mobile-logo {
-                font-family: 'Oswald', sans-serif;
-                font-size: 1.2rem;
-                color: var(--primary-orange);
-                text-decoration: none;
+            .mobile-logo-styled {
+                font-family: var(--font-heading);
+                font-size: 1.4rem;
                 font-weight: 700;
-                letter-spacing: 1px;
+                color: #ffffff;
+                text-decoration: none;
+                letter-spacing: 2px;
+                text-transform: uppercase;
                 margin-left: auto;
-                /* Push logo to center/right */
                 margin-right: auto;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+
+            .mobile-logo-styled::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--primary-orange);
+                transition: width 0.3s ease;
+            }
+
+            .mobile-logo-styled:hover::after {
+                width: 100%;
             }
 
             .dashboard-container {
@@ -436,7 +477,7 @@
         <button class="dashboard-hamburger" id="dashboardHamburger">
             <i class="fas fa-bars"></i>
         </button>
-        <a href="index.html" class="mobile-logo">GAME DEV STUDIO</a>
+        <a href="index.html" class="mobile-logo-styled">GAME DEV STUDIO</a>
     </div>
 
     <!-- Sidebar overlay for mobile -->
@@ -445,7 +486,7 @@
     <div class="dashboard-container">
         <aside class="sidebar" id="dashboardSidebar">
             <button class="sidebar-close" id="sidebarClose">&times;</button>
-            <a href="index.html" class="sidebar-logo">GAME DEV STUDIO</a>
+            <a href="index.html" class="sidebar-logo-styled">GAME DEV STUDIO</a>
             <div class="nav-item active"><i class="fas fa-home"></i> Dashboard</div>
             <div class="nav-item"><i class="fas fa-project-diagram"></i> Projects</div>
             <div class="nav-item"><i class="fas fa-users"></i> Team</div>
